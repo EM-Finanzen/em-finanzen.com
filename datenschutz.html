@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
     <title>Datenschutzerklärung | EM Finanzen - Erik Manvajler</title>
+    <link rel="canonical" href="https://em-finanzen.com/datenschutz.html">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
     <link rel="icon" href="favicon.ico" sizes="48x48">
@@ -90,9 +91,265 @@
             color: #856404;
             font-size: 0.9rem;
         }
+    
+        /* ===== LOADING SCREEN ===== */
+        .loader {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(145deg, #0c1929, #111d2e);
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 24px;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .loader-text {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: #fff;
+            opacity: 0;
+            animation: loaderFade 0.8s ease 0.3s forwards;
+        }
+        .loader-bar {
+            width: 200px;
+            height: 3px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 3px;
+            overflow: hidden;
+            opacity: 0;
+            animation: loaderFade 0.8s ease 0.5s forwards;
+        }
+        .loader-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--gold, #06b6d4), var(--gold-light, #22d3ee));
+            border-radius: 3px;
+            animation: loaderProgress 1.2s ease 0.6s forwards;
+            width: 0;
+        }
+        @keyframes loaderFade { to { opacity: 1; } }
+        @keyframes loaderProgress { to { width: 100%; } }
+
+        /* ===== SCROLL PROGRESS BAR ===== */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #06b6d4, #3b82f6, #818cf8);
+            z-index: 10000;
+            width: 0;
+            transition: width 0.1s linear;
+        }
+
+        /* ===== COOKIE BANNER ===== */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--black, #0f172a);
+            color: #fff;
+            padding: 20px 24px;
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+        .cookie-banner.show { display: flex; }
+        .cookie-banner p { margin: 0; max-width: 600px; }
+        .cookie-banner a { color: var(--gold, #06b6d4); }
+        .cookie-btns { display: flex; gap: 12px; }
+        .cookie-btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .cookie-accept { background: var(--primary, #1e3a5f); color: #fff; }
+        .cookie-accept:hover { background: var(--primary-light, #3b82f6); }
+        .cookie-decline { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3); }
+        .cookie-decline:hover { border-color: #fff; }
+
+        /* ===== FLOATING CONTACT BUTTON ===== */
+        .contact-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 12px;
+        }
+        .contact-float-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-end;
+            opacity: 0;
+            transform: translateY(20px) scale(0.8);
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .contact-float.open .contact-float-options {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: all;
+        }
+        .contact-float-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .contact-float-label {
+            background: #fff;
+            color: var(--dark-gray, #475569);
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+            white-space: nowrap;
+        }
+        .contact-float-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+        .contact-float-icon:hover { transform: scale(1.1); }
+        .contact-float-icon svg { width: 24px; height: 24px; }
+        .contact-float-icon.wa { background: #25D366; }
+        .contact-float-icon.phone { background: var(--primary, #1e3a5f); }
+        .contact-float-icon.mail { background: var(--gold, #06b6d4); }
+        .contact-float-icon.cal { background: var(--primary-dark, #0c1929); }
+        .contact-float-main {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary, #1e3a5f), var(--primary-dark, #0c1929));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .contact-float-main:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(59, 130, 246, 0.5);
+        }
+        .contact-float-main svg {
+            width: 28px;
+            height: 28px;
+            stroke: #fff;
+            transition: transform 0.3s ease;
+        }
+        .contact-float.open .contact-float-main svg { transform: rotate(45deg); }
+        .contact-float-pulse {
+            position: absolute;
+            top: -4px; left: -4px; right: -4px; bottom: -4px;
+            border-radius: 50%;
+            border: 2px solid var(--primary, #1e3a5f);
+            animation: contactPulse 2s infinite;
+        }
+        .contact-float.open .contact-float-pulse { animation: none; opacity: 0; }
+        @keyframes contactPulse {
+            0%, 100% { transform: scale(1); opacity: 0.4; }
+            50% { transform: scale(1.15); opacity: 0; }
+        }
+
+        /* ===== MOBILE BOTTOM NAV ===== */
+        .mobile-bottom-nav {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            border-top: 1px solid var(--light-gray, #e2e8f0);
+            z-index: 9997;
+            padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+        }
+        .mobile-bottom-nav-inner {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .mobile-bottom-nav a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            padding: 6px 12px;
+            font-size: 0.7rem;
+            color: var(--mid-gray, #94a3b8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .mobile-bottom-nav a.active,
+        .mobile-bottom-nav a:hover { color: var(--primary, #1e3a5f); }
+        .mobile-bottom-nav svg {
+            width: 22px;
+            height: 22px;
+            stroke: currentColor;
+        }
+        .mobile-bottom-nav .nav-book-btn {
+            background: var(--primary, #1e3a5f);
+            color: #fff;
+            border-radius: 12px;
+            padding: 10px 16px;
+        }
+        .mobile-bottom-nav .nav-book-btn svg { stroke: #fff; }
+
+        @media (max-width: 768px) {
+            .mobile-bottom-nav { display: block; }
+            .contact-float { bottom: 80px; }
+            .contact-float-label { display: none; }
+        }
+
     </style>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div style="display:flex;flex-direction:column;align-items:center;">
+            <svg width="50" height="25" viewBox="0 0 60 30" fill="none">
+                <defs><linearGradient id="loaderCrown" x1="12" y1="14" x2="48" y2="14" gradientUnits="userSpaceOnUse"><stop stop-color="#22d3ee"/><stop offset=".5" stop-color="#60a5fa"/><stop offset="1" stop-color="#818cf8"/></linearGradient></defs>
+                <path d="M12 26 L20 10 L26 18 L30 4 L34 18 L40 10 L48 26" stroke="url(#loaderCrown)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <circle cx="20" cy="9" r="2.5" fill="#60a5fa"/><circle cx="30" cy="3" r="3" fill="#93c5fd"/><circle cx="40" cy="9" r="2.5" fill="#60a5fa"/>
+            </svg>
+            <div style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:3rem;letter-spacing:0.1em;color:#e2e8f0;line-height:1;margin-top:4px;">EM</div>
+            <div style="width:60px;height:3px;background:linear-gradient(90deg,#22d3ee,#60a5fa,#818cf8);border-radius:2px;margin:6px 0 8px;"></div>
+            <div style="font-family:'DM Sans',sans-serif;font-weight:600;font-size:0.75rem;letter-spacing:0.3em;color:#94a3b8;text-transform:uppercase;">FINANZEN</div>
+        </div>
+        <div class="loader-text" style="margin-top:16px;font-size:0.85rem;color:#64748b;">Dein Weg. Deine Zukunft.</div>
+        <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+
     <div class="container">
         <a href="index.html" class="back-link">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -228,11 +485,117 @@
         
         <h2>7. Aktualität und Änderung dieser Datenschutzerklärung</h2>
         <p>
-            Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Januar 2025.
+            Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Februar 2026.
         </p>
         <p>
             Durch die Weiterentwicklung unserer Website und Angebote oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern.
         </p>
     </div>
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <p>Diese Website nutzt Cookies, um Ihnen die bestmögliche Erfahrung zu bieten. <a href="datenschutz.html">Mehr erfahren</a></p>
+        <div class="cookie-btns">
+            <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Akzeptieren</button>
+            <button class="cookie-btn cookie-decline" onclick="declineCookies()">Nur notwendige</button>
+        </div>
+    </div>
+    <!-- Floating Contact Button -->
+    <div class="contact-float" id="contactFloat">
+        <div class="contact-float-options">
+            <a href="https://wa.me/491234567890?text=Hallo%20Erik%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Finanzberatung." class="contact-float-option" target="_blank" rel="noopener">
+                <span class="contact-float-label">WhatsApp</span>
+                <div class="contact-float-icon wa">
+                    <svg viewBox="0 0 24 24" fill="white" stroke="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </div>
+            </a>
+            <a href="tel:+491234567890" class="contact-float-option">
+                <span class="contact-float-label">Anrufen</span>
+                <div class="contact-float-icon phone">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+            </a>
+            <a href="mailto:info@em-finanzen.com" class="contact-float-option">
+                <span class="contact-float-label">E-Mail</span>
+                <div class="contact-float-icon mail">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+            </a>
+            <a href="index.html#contact" class="contact-float-option" onclick="if(typeof openBooking==='function'){openBooking(event);document.getElementById('contactFloat').classList.remove('open');}">
+                <span class="contact-float-label">Termin buchen</span>
+                <div class="contact-float-icon cal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+            </a>
+        </div>
+        <button class="contact-float-main" onclick="document.getElementById('contactFloat').classList.toggle('open')" aria-label="Kontakt">
+            <div class="contact-float-pulse"></div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </button>
+    </div>
+    <!-- Mobile Bottom Navigation -->
+    <div class="mobile-bottom-nav">
+        <div class="mobile-bottom-nav-inner">
+            <a href="index.html#about" aria-label="Über mich">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span>Über mich</span>
+            </a>
+            <a href="index.html#services" aria-label="Leistungen">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>Leistungen</span>
+            </a>
+            <a href="index.html#contact" class="nav-book-btn" aria-label="Termin buchen" onclick="if(typeof openBooking==='function'){openBooking(event);}">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <span>Termin</span>
+            </a>
+            <a href="index.html" aria-label="Startseite">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <span>Start</span>
+            </a>
+            <a href="index.html#contact" aria-label="Kontakt">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <span>Kontakt</span>
+            </a>
+        </div>
+    </div>
+
+
+    <script>
+        // ===== LOADING SCREEN =====
+        setTimeout(() => {
+            document.getElementById('loader').classList.add('hidden');
+        }, 1800);
+
+        // ===== SCROLL PROGRESS BAR =====
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = (scrollTop / scrollHeight) * 100;
+            document.getElementById('scrollProgress').style.width = progress + '%';
+        });
+
+        // ===== COOKIE BANNER =====
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').classList.remove('show');
+        }
+        function declineCookies() {
+            localStorage.setItem('cookieConsent', 'declined');
+            document.getElementById('cookieBanner').classList.remove('show');
+        }
+        if (!localStorage.getItem('cookieConsent')) {
+            setTimeout(() => {
+                document.getElementById('cookieBanner').classList.add('show');
+            }, 2000);
+        }
+
+        // ===== FLOATING CONTACT - CLICK OUTSIDE =====
+        document.addEventListener('click', function(e) {
+            const float = document.getElementById('contactFloat');
+            if (float && !float.contains(e.target)) {
+                float.classList.remove('open');
+            }
+        });
+
+    </script>
 </body>
 </html>
