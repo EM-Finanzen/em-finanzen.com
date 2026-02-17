@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<!-- EM Finanzen - Finanzberater Düsseldorf -->
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ihr eigenständiger Finanzberater in Düsseldorf. Erik Manvajler bietet persönliche Finanzberatung für Düsseldorfer Fachkräfte und Unternehmen. Online oder vor Ort.">
+    <meta name="keywords" content="Finanzberater Düsseldorf, Finanzberatung Düsseldorf, eigenständige Finanzberatung, Vermögensberatung Düsseldorf, Altersvorsorge Düsseldorf, Expats Finanzberatung">
+    <meta name="author" content="Erik Manvajler - EM Finanzen">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="DE-NW">
+    <meta name="geo.placename" content="Düsseldorf">
+    <meta property="og:title" content="Finanzberater Düsseldorf | EM Finanzen - Erik Manvajler">
+    <meta property="og:description" content="Ihr eigenständiger Finanzberater in Düsseldorf. Persönliche Beratung für Versicherungen, Altersvorsorge und Vermögensaufbau.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <title>Finanzberater Düsseldorf | EM Finanzen - Erik Manvajler</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="fonts/fonts.css" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "EM Finanzen - Erik Manvajler",
+        "description": "Eigenständiger Finanzberater für Düsseldorf und Umgebung. Ganzheitliche Finanzberatung für Versicherungen, Altersvorsorge und Vermögensaufbau.",
+        "url": "https://em-finanzen.com/finanzberater-duesseldorf.html",
+        "telephone": "+491234567890",
+        "email": "info@em-finanzen.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Neuss",
+            "addressRegion": "NRW",
+            "postalCode": "47918",
+            "addressCountry": "DE"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 51.198944,
+            "longitude": 6.68528
+        },
+        "areaServed": [
+            { "@type": "City", "name": "Düsseldorf" },
+            { "@type": "City", "name": "Neuss" },
+            { "@type": "City", "name": "Meerbusch" },
+            { "@type": "City", "name": "Ratingen" },
+            { "@type": "City", "name": "Erkrath" },
+            { "@type": "City", "name": "Langenfeld" }
+        ],
+        "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" }
+        ],
+        "priceRange": "Kostenlose Erstberatung",
+        "founder": {
+            "@type": "Person",
+            "name": "Erik Manvajler",
+            "jobTitle": "Finanzberater"
+        }
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #0c1929;
+            --primary: #1e3a5f;
+            --primary-light: #3b82f6;
+            --gold: #06b6d4;
+            --gold-light: #22d3ee;
+            --indigo-400: #818cf8;
+            --blue-700: #1e40af;
+            --off-white: #f8fafc;
+            --light-gray: #e2e8f0;
+            --mid-gray: #94a3b8;
+            --dark-gray: #475569;
+            --black: #0f172a;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--off-white);
+            color: var(--black);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(30,58,95,0.08);
+            transition: box-shadow 0.3s ease;
+        }
+
+        header.scrolled {
+            box-shadow: 0 2px 24px rgba(12,25,41,0.10);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 24px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .logo-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 0.72rem;
+            color: var(--mid-gray);
+            letter-spacing: 0.02em;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            align-items: center;
+        }
+
+        nav a, .nav-links a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.92rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a::after, .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
+            background: var(--gold);
+            transition: width 0.3s;
+        }
+
+        nav a:hover, .nav-links a:hover { color: var(--primary); }
+        nav a:hover::after, .nav-links a:hover::after { width: 100%; }
+
+        .nav-cta, .cta-button {
+            background: var(--primary) !important;
+            color: #ffffff !important;
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease !important;
+            cursor: pointer;
+            border: none;
+            font-size: 0.92rem;
+            text-decoration: none;
+        }
+        .nav-cta::after, .cta-button::after { display: none !important; }
+        .nav-cta:hover, .cta-button:hover {
+            background: var(--primary-dark) !important;
+            transform: translateY(-1px);
+            color: #ffffff !important;
+        }
+
+        .mobile-menu-btn, .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+        .mobile-toggle span {
+            display: block;
+            width: 24px; height: 2px;
+            background: var(--primary);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* mobile-menu-btn handled above */
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #0f2a4a 50%, var(--primary) 100%);
+            color: white;
+            padding: 5rem 2rem;
+            padding-top: calc(5rem + 72px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(circle at 70% 50%, rgba(6,182,212,0.1) 0%, transparent 70%);
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, white, var(--gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            color: var(--light-gray);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .stats-panel {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 2.5rem;
+            border-radius: 16px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 0;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--gold-light);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--light-gray);
+            margin-top: 0.25rem;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .local-context {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 3rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+        }
+
+        .local-context h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold-light);
+        }
+
+        .local-context p {
+            color: var(--light-gray);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 3px solid var(--primary-light);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .service-card p {
+            color: var(--dark-gray);
+            font-size: 1rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, var(--primary), var(--blue-700));
+            color: white;
+            padding: 1.25rem 1.5rem;
+            text-align: left;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 1.25rem 1.5rem;
+            background: white;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table td.check {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        .comparison-table td.cross {
+            color: #ef4444;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        .highlight-row td {
+            background: #f0fdf4;
+        }
+
+        .meeting-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .meeting-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            border-bottom: 3px solid var(--gold);
+            transition: transform 0.3s;
+        }
+
+        .meeting-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .meeting-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .meeting-card p {
+            color: var(--dark-gray);
+        }
+
+        .faq {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .faq-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .faq-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.5rem;
+            color: var(--primary-light);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.open .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            color: var(--dark-gray);
+            line-height: 1.8;
+            display: none;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        .professions-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .profession-badge {
+            background: white;
+            border: 2px solid var(--light-gray);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: border-color 0.3s, transform 0.3s;
+            cursor: default;
+        }
+
+        .profession-badge:hover {
+            border-color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .profession-badge p {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 4rem;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(6,182,212,0.15) 0%, transparent 70%);
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+            position: relative;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--light-gray);
+            position: relative;
+        }
+
+        .cta-section .cta-button {
+            background: linear-gradient(135deg, var(--primary-light), var(--gold));
+            font-size: 1.1rem;
+            padding: 1rem 2rem;
+            position: relative;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 3rem 2rem 1.5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--gold-light);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: var(--light-gray);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold-light);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: var(--mid-gray);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            animation: fadeIn 0.3s;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 16px;
+            max-width: 500px;
+            width: 100%;
+            position: relative;
+            animation: slideIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close {
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--mid-gray);
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close:hover {
+            color: var(--black);
+        }
+
+        .modal-content h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .modal-content p {
+            color: var(--dark-gray);
+            margin-bottom: 2rem;
+        }
+
+        .modal-content input,
+        .modal-content textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 2px solid var(--light-gray);
+            border-radius: 8px;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .modal-content input:focus,
+        .modal-content textarea:focus {
+            outline: none;
+            border-color: var(--primary-light);
+        }
+
+        .modal-content button {
+            width: 100%;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav { display: none; }
+            nav.open {
+                display: flex; flex-direction: column;
+                position: fixed; top: 72px; left: 0; right: 0;
+                background: rgba(255,255,255,0.98); backdrop-filter: blur(12px);
+                padding: 24px; gap: 16px;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.12); z-index: 999;
+            }
+            nav.open a { font-size: 1rem; padding: 8px 0; border-bottom: 1px solid var(--light-gray); color: var(--dark-gray); }
+            .mobile-toggle { display: flex !important; }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--primary-dark);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .meeting-options {
+                grid-template-columns: 1fr;
+            }
+
+            .professions-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <div style="display:flex;flex-direction:column;align-items:center;width:48px;">
+                    <svg width="32" height="16" viewBox="0 0 60 30" fill="none">
+                        <defs><linearGradient id="hCrown" x1="12" y1="14" x2="48" y2="14" gradientUnits="userSpaceOnUse"><stop stop-color="#06b6d4"/><stop offset=".5" stop-color="#3b82f6"/><stop offset="1" stop-color="#1e40af"/></linearGradient></defs>
+                        <path d="M12 26 L20 10 L26 18 L30 4 L34 18 L40 10 L48 26" stroke="url(#hCrown)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <circle cx="20" cy="9" r="2.5" fill="#3b82f6"/><circle cx="30" cy="3" r="3" fill="#1e40af"/><circle cx="40" cy="9" r="2.5" fill="#3b82f6"/>
+                    </svg>
+                    <span style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:24px;letter-spacing:0.08em;color:#1e3a5f;line-height:1;margin-top:-2px;">EM</span>
+                    <div style="width:30px;height:2px;background:linear-gradient(90deg,#06b6d4,#3b82f6,#1e40af);border-radius:1px;margin-top:1px;"></div>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                    <div class="logo-text">EM Finanzen</div>
+                    <div class="logo-tagline">Dein Weg. Deine Zukunft.</div>
+                </div>
+            </a>
+            <nav id="nav">
+                <a href="index.html">Home</a>
+                <a href="ueber-erik.html">Über Erik</a>
+                <a href="ablauf.html">So funktioniert's</a>
+                <a href="rechner.html">Rechner</a>
+                <a href="index.html" class="nav-cta" onclick="openModal(event)">Termin buchen</a>
+            </nav>
+            <div class="mobile-toggle" onclick="toggleNav()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Ihr Finanzberater in Düsseldorf</h1>
+                <p>Eigenständige Finanzberatung für Fachkräfte, Expats und Unternehmen in der Landeshauptstadt. Kompetent, transparent und auf Ihre Ziele ausgerichtet.</p>
+                <div class="hero-cta">
+                    <button class="cta-button" onclick="openModal()">Kostenlose Erstberatung</button>
+                </div>
+            </div>
+            <div class="stats-panel">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Eigenständig</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">30+</div>
+                        <div class="stat-label">km Einzugsgebiet</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Provisionen</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Transparent</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="section">
+            <div class="local-context">
+                <h3>Finanzberatung für die Landeshauptstadt</h3>
+                <p>Düsseldorf ist eines der bedeutendsten Wirtschafts- und Finanzzentren Deutschlands. Als Landeshauptstadt NRWs zieht die Stadt Fachkräfte, internationale Konzerne und ambitionierte Unternehmer aus aller Welt an. Die Messe, die Modeindustrie, Banken und Unternehmensberatungen machen Düsseldorf zu einem besonderen Pflaster.</p>
+                <p>Diese Vielfalt bringt einzigartige finanzielle Herausforderungen mit sich: Expatriate-Situationen, hohe Einkommen mit entsprechend komplexer Steuerplanung, Immobilienentscheidungen in einem dynamischen Markt und internationale Rentenansprüche. Genau hier setze ich meine Expertise ein.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Meine Leistungen für Düsseldorf</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Expat-Finanzplanung</h3>
+                    <p>Spezialisierte Beratung für internationale Fachkräfte: Rentenansprüche aus dem Ausland, Steueroptimierung und Aufbau lokaler Altersvorsorge.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Altersvorsorge</h3>
+                    <p>Individuelle Vorsorgestrategien für Düsseldorfer Berufstätige. Rürup, Riester, betriebliche Altersvorsorge und private Investments im Vergleich.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Kapitalanlage</h3>
+                    <p>Professionelle Anlagestrategien für den Aufbau und Erhalt Ihres Vermögens. ETFs, Fonds, Immobilien – eigenständig und produktneutral.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Immobilienfinanzierung</h3>
+                    <p>Düsseldorf ist ein teurer Immobilienmarkt. Ich helfe Ihnen, die optimale Finanzierung zu finden und unnötige Kosten zu vermeiden.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Versicherungscheck</h3>
+                    <p>Überprüfung Ihrer bestehenden Absicherung. Optimierung ohne Unter- oder Überversicherung – marktübergreifend und transparent.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Unternehmer-Beratung</h3>
+                    <p>Betriebliche Altersvorsorge, Gesellschafter-Geschäftsführer-Versorgung und Unternehmensfinanzierung für Düsseldorfer Firmen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Für wen bin ich in Düsseldorf tätig?</h2>
+            <p>Meine Klienten in Düsseldorf kommen aus den unterschiedlichsten Berufsfeldern. Gemeinsam ist ihnen der Wunsch nach eigenständiger, professioneller Finanzberatung.</p>
+            <div class="professions-grid">
+                <div class="profession-badge"><p>Manager &amp; Führungskräfte</p></div>
+                <div class="profession-badge"><p>Internationale Fachkräfte</p></div>
+                <div class="profession-badge"><p>Selbstständige</p></div>
+                <div class="profession-badge"><p>Mediziner &amp; Juristen</p></div>
+                <div class="profession-badge"><p>Ingenieure &amp; IT</p></div>
+                <div class="profession-badge"><p>Unternehmer</p></div>
+                <div class="profession-badge"><p>Beamte</p></div>
+                <div class="profession-badge"><p>Arbeitnehmer</p></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Eigenständige Beratung vs. Düsseldorfer Bankberatung</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Kriterium</th>
+                        <th>EM Finanzen (eigenständig)</th>
+                        <th>Düsseldorfer Bankberater</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="highlight-row">
+                        <td><strong>Produktneutralität</strong></td>
+                        <td class="check">✓ Kompletter Markt</td>
+                        <td class="cross">✗ Nur Hausprodukte</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Interessenkonflikt</strong></td>
+                        <td class="check">✓ Kein Konflikt</td>
+                        <td class="cross">✗ Verkaufsziele</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td><strong>Kostentransparenz</strong></td>
+                        <td class="check">✓ Vollständig transparent</td>
+                        <td class="cross">✗ Versteckte Provisionen</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Individuelle Zeit</strong></td>
+                        <td class="check">✓ Kein Zeitdruck</td>
+                        <td class="cross">✗ Standardisierte Prozesse</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td><strong>Langfristige Begleitung</strong></td>
+                        <td class="check">✓ Partnerschaft</td>
+                        <td class="cross">✗ Oft wechselnde Berater</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Flexibilität</strong></td>
+                        <td class="check">✓ Termin nach Ihnen</td>
+                        <td class="cross">✗ Feste Öffnungszeiten</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Beratungsoptionen für Düsseldorf</h2>
+            <div class="meeting-options">
+                <div class="meeting-card">
+                    <h3>Online-Beratung</h3>
+                    <p>Bequem und flexibel per Videocall. Besonders beliebt bei vielbeschäftigten Düsseldorfer Berufstätigen. Gleiche Qualität, kein Fahrtweg.</p>
+                </div>
+                <div class="meeting-card">
+                    <h3>Vor Ort in Düsseldorf</h3>
+                    <p>Persönliches Treffen bei Ihnen zu Hause oder in einem Besprechungsraum in Düsseldorf auf Anfrage.</p>
+                </div>
+                <div class="meeting-card">
+                    <h3>Büro Zeven</h3>
+                    <p>Mein Büro liegt nur 30 Minuten von Düsseldorf entfernt. Über die A44 oder A52 schnell erreichbar.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Häufig gestellte Fragen – Finanzberatung in Düsseldorf</h2>
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">Sind Sie als Finanzberater in Düsseldorf zugelassen?</div>
+                    <div class="faq-answer">Ja, ich bin als eigenständiger Finanzberater bundesweit tätig und betreue Klienten in Düsseldorf und der gesamten Rheinregion. Die Beratung kann vollständig online stattfinden oder ich komme zu Ihnen nach Düsseldorf.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">Ich bin Expat in Düsseldorf – können Sie mir helfen?</div>
+                    <div class="faq-answer">Absolut. Düsseldorf ist ein internationaler Standort mit vielen ausländischen Fachkräften. Ich helfe Ihnen beim Aufbau Ihrer deutschen Altersvorsorge, der steueroptimierten Anlage und berücksichtige dabei internationale Rentenansprüche und länderspezifische Besonderheiten.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">Wie teuer ist eine Immobilie in Düsseldorf zu finanzieren?</div>
+                    <div class="faq-answer">Düsseldorf gehört zu den teuersten Immobilienmärkten in NRW. Ein guter Finanzierungsberater kann hier erhebliche Unterschiede machen. Ich vergleiche Konditionen von über 400 Banken und Kreditgebern, um Ihnen die beste Finanzierungslösung zu sichern. Ein kostenloser Vergleich spart oft tausende Euro über die Laufzeit.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">Was unterscheidet Sie von einer großen Düsseldorfer Bank?</div>
+                    <div class="faq-answer">Düsseldorfer Banken beraten in ihren eigenen Produkten und haben Verkaufsziele. Ich bin eigenständig, vergleiche den gesamten Markt und erhalte keine Provision von Produktanbietern. Mein einziges Ziel ist Ihr finanzieller Erfolg.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">Bieten Sie auch Hilfe bei der betrieblichen Altersvorsorge für Düsseldorfer Unternehmen?</div>
+                    <div class="faq-answer">Ja, ich arbeite mit kleinen und mittelständischen Unternehmen in Düsseldorf zusammen, um attraktive betriebliche Altersvorsorge-Lösungen für Mitarbeiter zu entwickeln. Das verbessert die Mitarbeiterbindung und ist steuerlich vorteilhaft für Arbeitgeber und Arbeitnehmer.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">Wie schnell bekomme ich einen Termin?</div>
+                    <div class="faq-answer">In der Regel innerhalb von 3-5 Werktagen. Bei dringenden Anfragen versuche ich, schneller einen Termin zu ermöglichen. Schreiben Sie mir einfach oder rufen Sie direkt an.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Starten Sie jetzt in Düsseldorf</h2>
+            <p>Vereinbaren Sie Ihr kostenloses Erstgespräch – online, in Düsseldorf oder in meinem Büro in Zeven.</p>
+            <button class="cta-button" onclick="openModal()">Jetzt Termin vereinbaren</button>
+        </div>
+    </div>
+
+    <footer style="background:var(--primary-dark);color:rgba(255,255,255,0.65);padding:60px 0 0;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 24px;">
+            <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.08);">
+                <div>
+                    <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:1.2rem;color:#ffffff;margin-bottom:14px;">EM Finanzen</div>
+                    <p style="font-size:0.9rem;line-height:1.7;color:rgba(255,255,255,0.5);">Dein Weg. Deine Zukunft. Ganzheitliche Finanzberatung von Erik Manvajler in Neuss, Zeven und Düsseldorf.</p>
+                </div>
+                <div>
+                    <h4 style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:0.82rem;text-transform:uppercase;letter-spacing:0.1em;color:#ffffff;margin-bottom:18px;">Leistungen</h4>
+                    <div style="display:flex;flex-direction:column;gap:8px;font-size:0.9rem;">
+                        <a href="versicherungen.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Versicherungen</a>
+                        <a href="altersvorsorge.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Altersvorsorge</a>
+                        <a href="vermoegensaufbau.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Vermögensaufbau</a>
+                        <a href="finanzierung.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Finanzierung</a>
+                        <a href="haushaltsoptimierung.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Haushaltsoptimierung</a>
+                        <a href="steuervorteile.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Steuervorteile</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:0.82rem;text-transform:uppercase;letter-spacing:0.1em;color:#ffffff;margin-bottom:18px;">Informationen</h4>
+                    <div style="display:flex;flex-direction:column;gap:8px;font-size:0.9rem;">
+                        <a href="ueber-erik.html" style="color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Über Erik</a>
+                        <a href="ablauf.html" style="color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">So funktioniert's</a>
+                        <a href="rechner.html" style="color:rgba(255,255,255,0.5);text-decoration:none;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Finanzrechner</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:0.82rem;text-transform:uppercase;letter-spacing:0.1em;color:#ffffff;margin-bottom:18px;">Kontakt</h4>
+                    <div style="display:flex;flex-direction:column;gap:8px;font-size:0.9rem;color:rgba(255,255,255,0.5);">
+                        <span>41640 Neuss & 27404 Zeven</span>
+                        <span>+49 123 456 7890</span>
+                        <span>info@em-finanzen.com</span>
+                    </div>
+                </div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:24px 0;font-size:0.83rem;color:rgba(255,255,255,0.3);flex-wrap:wrap;gap:12px;">
+                <p style="margin:0;">&copy; 2026 EM Finanzen - Erik Manvajler. Alle Rechte vorbehalten.</p>
+                <div style="display:flex;gap:24px;">
+                    <a href="impressum.html" style="color:rgba(255,255,255,0.35);text-decoration:none;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Impressum</a>
+                    <a href="datenschutz.html" style="color:rgba(255,255,255,0.35);text-decoration:none;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Termin vereinbaren</h2>
+            <p>Buchen Sie jetzt Ihr kostenloses Erstgespräch. Ich melde mich innerhalb von 24 Stunden bei Ihnen.</p>
+            <form onsubmit="submitForm(event)">
+                <input type="text" placeholder="Ihr Name" required>
+                <input type="email" placeholder="Ihre E-Mail" required>
+                <input type="tel" placeholder="Ihre Telefonnummer" required>
+                <textarea placeholder="Ihre Nachricht (optional)" rows="4"></textarea>
+                <button type="submit" class="cta-button">Termin anfragen</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scroll to Top -->
+    <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Nach oben" style="position:fixed;bottom:32px;right:32px;width:48px;height:48px;background:linear-gradient(135deg,var(--primary),var(--blue-700));border-radius:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transform:translateY(16px);transition:all 0.3s ease;z-index:999;border:none;box-shadow:0 4px 16px rgba(30,58,95,0.35);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <script>
+        // Header scroll
+        const headerEl = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) headerEl.classList.add('scrolled');
+            else headerEl.classList.remove('scrolled');
+            const btn = document.getElementById('scrollTop');
+            if (btn) {
+                if (window.scrollY > 400) { btn.style.opacity='1'; btn.style.transform='translateY(0)'; }
+                else { btn.style.opacity='0'; btn.style.transform='translateY(16px)'; }
+            }
+        });
+
+        // Mobile nav toggle
+        function toggleNav() {
+            const nav = document.getElementById('nav');
+            if (nav) nav.classList.toggle('open');
+        }
+
+        // Modal
+        function openModal(e) {
+            if (e) e.preventDefault();
+            document.getElementById('bookingModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('bookingModal').style.display = 'none';
+        }
+
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('bookingModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        function submitForm(event) {
+            event.preventDefault();
+            alert('Vielen Dank! Ihre Anfrage wurde gesendet. Ich melde mich innerhalb von 24 Stunden bei Ihnen.');
+            closeModal();
+        }
+
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            item.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

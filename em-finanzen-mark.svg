@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" width="200" height="160">
+  <defs>
+    <linearGradient id="crownG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    <linearGradient id="lineG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&amp;display=swap');
+    </style>
+  </defs>
+  
+  <!-- Crown -->
+  <path d="M72 38 L84 14 L93 26 L100 4 L107 26 L116 14 L128 38" 
+        stroke="url(#crownG)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="84" cy="12" r="2.5" fill="#3b82f6"/>
+  <circle cx="100" cy="2.5" r="3" fill="#1e40af"/>
+  <circle cx="116" cy="12" r="2.5" fill="#3b82f6"/>
+  
+  <!-- EM text -->
+  <text x="100" y="112" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-weight="700" font-size="88" letter-spacing="8" fill="#1e3a5f">EM</text>
+  
+  <!-- Gradient underline -->
+  <rect x="45" y="124" width="110" height="3" rx="1.5" fill="url(#lineG)"/>
+</svg>

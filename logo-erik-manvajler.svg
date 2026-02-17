@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+  <defs>
+    <!-- Gradient inspired by Telis but unique to Erik -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B4D3E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E7D5B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#C9A962;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8C872;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon: Abstract house/shield representing protection and home finances -->
+  <g transform="translate(10, 10)">
+    <!-- Main shield/house shape -->
+    <path d="M50 5 L95 35 L95 90 Q95 95 90 95 L10 95 Q5 95 5 90 L5 35 Z" fill="url(#primaryGradient)"/>
+    <!-- Inner abstract person/growth symbol -->
+    <circle cx="50" cy="45" r="12" fill="url(#accentGradient)"/>
+    <path d="M35 65 Q50 55 65 65 L65 85 L35 85 Z" fill="url(#accentGradient)"/>
+    <!-- Upward arrow symbolizing growth -->
+    <path d="M50 25 L58 38 L53 38 L53 48 L47 48 L47 38 L42 38 Z" fill="#FFFFFF" opacity="0.9"/>
+  </g>
+  
+  <!-- Typography -->
+  <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+    <!-- Name: Erik Manvajler -->
+    <text x="120" y="55" font-size="32" font-weight="600" fill="#1B4D3E" letter-spacing="1">
+      Erik Manvajler
+    </text>
+    <!-- Tagline -->
+    <text x="120" y="82" font-size="13" font-weight="400" fill="#5A5A5A" letter-spacing="2">
+      UNTERNEHMENSBERATER FÜR DEN PRIVATEN HAUSHALT
+    </text>
+    <!-- Accent line -->
+    <rect x="120" y="90" width="60" height="3" fill="url(#accentGradient)" rx="1.5"/>
+  </g>
+</svg>

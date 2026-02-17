@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Steuervorteile durch Finanzplanung - Riester, Rürup, bAV, Förderungen. Bis zu 10.000€ Steuerersparnis jährlich für Arbeitnehmer, Selbstständige und Familien. EM Finanzen.">
+    <meta name="keywords" content="Steuervorteile, Riester-Rente, Rürup-Rente, bAV, Steuersparen, Finanzberatung, Förderungscheck">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Erik Manvajler - EM Finanzen">
+    <meta property="og:title" content="Steuervorteile | EM Finanzen - Erik Manvajler">
+    <meta property="og:description" content="Steuervorteile durch Finanzplanung mit EM Finanzen: Riester, Rürup, bAV, Förderungen. Bis zu 10.000 Euro Steuerersparnis jährlich. Kostenloser Förderungscheck.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <title>Steuervorteile | EM Finanzen - Dein Weg. Deine Zukunft.</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="fonts/fonts.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #0c1929;
+            --primary: #1e3a5f;
+            --primary-light: #3b82f6;
+            --gold: #06b6d4;
+            --gold-light: #22d3ee;
+            --indigo-400: #818cf8;
+            --blue-700: #1e40af;
+            --off-white: #f8fafc;
+            --light-gray: #e2e8f0;
+            --mid-gray: #94a3b8;
+            --dark-gray: #475569;
+            --black: #0f172a;
+            --white: #ffffff;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --radius: 16px;
+            --radius-sm: 10px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+            --shadow-lg: 0 20px 40px rgba(0,0,0,0.14);
+        }
+
+        html { scroll-behavior: smooth; font-size: 16px; }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--black);
+            background: var(--off-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        #header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--light-gray);
+            transition: box-shadow 0.3s ease;
+        }
+        #header.scrolled { box-shadow: 0 4px 24px rgba(30,58,95,0.10); }
+
+        .header-content,
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            height: 76px;
+            gap: 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 0.02em;
+        }
+
+        .logo-tagline {
+            font-size: 0.72rem;
+            color: var(--mid-gray);
+            line-height: 1;
+            margin-top: 1px;
+        }
+
+        #nav {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        #nav a {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--dark-gray);
+            text-decoration: none;
+            padding: 0.5rem 0.85rem;
+            border-radius: 8px;
+            transition: color 0.2s, background 0.2s;
+            white-space: nowrap;
+        }
+        #nav a:hover { color: var(--primary); background: var(--off-white); }
+        #nav .nav-cta {
+            background: linear-gradient(135deg, var(--primary-light), var(--blue-700));
+            color: var(--white) !important;
+            padding: 0.55rem 1.25rem;
+            border-radius: 40px;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+        #nav .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(59,130,246,0.35); }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 8px;
+            background: none;
+            border: none;
+        }
+        .mobile-toggle span {
+            display: block; width: 24px; height: 2px;
+            background: var(--primary);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        .mobile-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .mobile-toggle.active span:nth-child(2) { opacity: 0; }
+        .mobile-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #0f2744 50%, var(--primary) 100%);
+            color: var(--off-white);
+            padding-top: calc(76px + 5rem);
+            padding-bottom: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background: radial-gradient(ellipse at bottom right, rgba(129, 140, 248, 0.1), transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--off-white);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--indigo-400);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            max-width: 700px;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-light);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: var(--blue-700);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--dark-gray);
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Content */
+        .content-text {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            font-size: 1.0625rem;
+            line-height: 1.8;
+            color: var(--dark-gray);
+        }
+
+        .content-text h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin: 2.5rem 0 1rem;
+        }
+
+        .content-text ul {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        .content-text li {
+            margin: 0.75rem 0;
+        }
+
+        /* Persona Cards */
+        .persona-section {
+            background: white;
+            padding: 5rem 0;
+        }
+
+        .persona-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .persona-card {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .persona-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .persona-card-header {
+            padding: 2rem;
+            color: white;
+        }
+
+        .persona-card:nth-child(1) .persona-card-header {
+            background: linear-gradient(135deg, var(--primary), var(--blue-700));
+        }
+
+        .persona-card:nth-child(2) .persona-card-header {
+            background: linear-gradient(135deg, #0d5c63, var(--gold));
+        }
+
+        .persona-card:nth-child(3) .persona-card-header {
+            background: linear-gradient(135deg, #3730a3, var(--indigo-400));
+        }
+
+        .persona-card-header h3 {
+            font-size: 1.75rem;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .persona-card-header p {
+            opacity: 0.9;
+        }
+
+        .persona-card-body {
+            background: white;
+            padding: 2rem;
+        }
+
+        .persona-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0.875rem 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .persona-item:last-child {
+            border-bottom: none;
+        }
+
+        .persona-item-label {
+            color: var(--dark-gray);
+            flex: 1;
+        }
+
+        .persona-item-value {
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-left: 1rem;
+            text-align: right;
+        }
+
+        .persona-total {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: var(--off-white);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .persona-total-label {
+            color: var(--dark-gray);
+            font-size: 0.9375rem;
+        }
+
+        .persona-total-value {
+            font-size: 2rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            color: #16a34a;
+        }
+
+        /* Produkt Boxes */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-light), var(--gold));
+        }
+
+        .product-card h3 {
+            font-size: 1.75rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-card .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--off-white);
+            color: var(--dark-gray);
+            border-radius: 999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .product-card p {
+            color: var(--dark-gray);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .product-detail {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            font-size: 0.9375rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .product-detail:last-child {
+            border-bottom: none;
+        }
+
+        .product-detail span:first-child {
+            color: var(--dark-gray);
+        }
+
+        .product-detail span:last-child {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary), var(--blue-700));
+            color: white;
+            padding: 3rem;
+            border-radius: 16px;
+            margin: 3rem auto;
+            max-width: 850px;
+        }
+
+        .highlight-box h3 {
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .highlight-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .highlight-row:last-child {
+            border-bottom: none;
+            padding-top: 1.5rem;
+            font-size: 1.25rem;
+        }
+
+        .highlight-row .label {
+            color: rgba(255,255,255,0.85);
+        }
+
+        .highlight-row .value {
+            font-weight: 700;
+            color: var(--gold-light);
+        }
+
+        /* Steps */
+        .steps-section {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            padding: 5rem 0;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            text-align: center;
+            color: white;
+        }
+
+        .step-icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid var(--indigo-400);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            margin: 0 auto 1.25rem;
+            color: var(--indigo-400);
+        }
+
+        .step h4 {
+            font-size: 1.25rem;
+            color: white;
+            margin-bottom: 0.75rem;
+        }
+
+        .step p {
+            color: var(--light-gray);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+
+        /* FAQ */
+        .faq {
+            background: white;
+            padding: 5rem 0;
+        }
+
+        .faq-item {
+            background: var(--off-white);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 1.5rem;
+            background: var(--off-white);
+            border: none;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: var(--light-gray);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--dark-gray);
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 600px;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-question::after {
+            content: '▼';
+            color: var(--indigo-400);
+            transition: transform 0.3s;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: var(--off-white);
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: var(--light-gray);
+            text-decoration: none;
+            display: block;
+            margin: 0.5rem 0;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--primary);
+            color: var(--mid-gray);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .modal-header h3 {
+            font-size: 2rem;
+            color: var(--primary-dark);
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--dark-gray);
+            line-height: 1;
+        }
+
+        .booking-options {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .booking-option {
+            padding: 1.5rem;
+            border: 2px solid var(--light-gray);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .booking-option:hover {
+            border-color: var(--indigo-400);
+            background: var(--off-white);
+        }
+
+        .booking-option.selected {
+            border-color: var(--primary-light);
+            background: var(--off-white);
+        }
+
+        .booking-option h4 {
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .booking-option p {
+            color: var(--dark-gray);
+            font-size: 0.9375rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid var(--light-gray);
+            border-radius: 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-light);
+        }
+
+        /* Disclaimer */
+        .disclaimer {
+            background: var(--off-white);
+            border-left: 4px solid var(--mid-gray);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 3rem 0;
+        }
+
+        .disclaimer p {
+            color: var(--dark-gray);
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            #nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 76px; left: 0; right: 0;
+                background: var(--white);
+                border-top: 1px solid var(--light-gray);
+                box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+                padding: 1rem;
+                gap: 0.25rem;
+                z-index: 999;
+            }
+            #nav.open { display: flex; }
+            #nav a { padding: 0.75rem 1rem; border-radius: 8px; font-size: 0.95rem; }
+            .mobile-toggle { display: flex; }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .hero {
+                padding-top: calc(76px + 3rem);
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.25rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .highlight-box {
+                padding: 2rem 1.5rem;
+            }
+
+            .modal-content {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 1.25rem; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FinancialService",
+        "name": "EM Finanzen - Steuervorteile",
+        "description": "Förderungscheck, Riester-/Rürup-Optimierung, betriebliche Altersvorsorge und Steuersparmodelle für Arbeitnehmer, Selbstständige und Familien",
+        "provider": {
+            "@type": "Person",
+            "name": "Erik Manvajler"
+        },
+        "areaServed": "DE",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Steuervorteile und Förderungen",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Förderungscheck"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Riester-Rente Optimierung"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Betriebliche Altersvorsorge"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body>
+    <header id="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon" style="display:flex;flex-direction:column;align-items:center;width:48px;">
+                    <svg width="32" height="16" viewBox="0 0 60 30" fill="none">
+                        <defs><linearGradient id="hCrown" x1="12" y1="14" x2="48" y2="14" gradientUnits="userSpaceOnUse"><stop stop-color="#06b6d4"/><stop offset=".5" stop-color="#3b82f6"/><stop offset="1" stop-color="#1e40af"/></linearGradient></defs>
+                        <path d="M12 26 L20 10 L26 18 L30 4 L34 18 L40 10 L48 26" stroke="url(#hCrown)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <circle cx="20" cy="9" r="2.5" fill="#3b82f6"/><circle cx="30" cy="3" r="3" fill="#1e40af"/><circle cx="40" cy="9" r="2.5" fill="#3b82f6"/>
+                    </svg>
+                    <span style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:24px;letter-spacing:0.08em;color:#1e3a5f;line-height:1;margin-top:-2px;">EM</span>
+                    <div style="width:30px;height:2px;background:linear-gradient(90deg,#06b6d4,#3b82f6,#1e40af);border-radius:1px;margin-top:1px;"></div>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                    <div class="logo-text" style="color:#1e3a5f;">EM Finanzen</div>
+                    <div class="logo-tagline" style="font-family:'Cormorant Garamond',serif;font-style:italic;letter-spacing:0.02em;font-size:0.7rem;color:#94a3b8;">Dein Weg. Deine Zukunft.</div>
+                </div>
+            </a>
+        <nav id="nav">
+            <a href="index.html">Home</a>
+            <a href="index.html#services">Leistungen</a>
+            <a href="finanzierung.html">Finanzierung</a>
+            <a href="haushaltsoptimierung.html">Haushaltsoptimierung</a>
+            <a href="index.html#faq">FAQ</a>
+            <a class="nav-cta" href="index.html" onclick="openModal(); return false;">Termin buchen</a>
+        </nav>
+        <button class="mobile-toggle" onclick="toggleNav()" aria-label="Navigation">
+            <span></span><span></span><span></span>
+        </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Steuern sparen, legal und strukturiert</h1>
+                <p class="hero-subtitle">Dein Weg. Deine Zukunft.</p>
+                <p>Viele zahlen Jahr für Jahr mehr Steuern als notwendig. Ob Arbeitnehmer, Selbstständiger oder Familie – das deutsche Steuerrecht bietet erhebliche Vorteile, wenn man sie kennt und richtig nutzt. Ich helfe dir dabei.</p>
+                <button class="btn" onclick="openModal()">Jetzt Förderungs-Check anfragen</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">Was du dem Staat nicht schenken musst</h2>
+            <p class="section-subtitle">Das deutsche Steuerrecht bietet zahlreiche legale Wege, die Steuerlast zu senken. Ich zeige dir, welche für deine Situation relevant sind.</p>
+
+            <div class="content-text">
+                <h3>Förderungscheck: Alles auf einen Blick</h3>
+                <p>Der erste Schritt ist der vollständige Förderungscheck. Ich analysiere deine persönliche und berufliche Situation und prüfe systematisch, welche steuerlichen Vorteile und staatlichen Förderungen du nutzen kannst.</p>
+
+                <p>Viele Menschen wissen nicht, welche Möglichkeiten ihnen zur Verfügung stehen. Oder sie haben zwar von Riester oder Rürup gehört, aber nie konsequent herausgearbeitet, ob und wie viel sie damit wirklich sparen könnten. Genau hier setze ich an.</p>
+
+                <p><strong>Was ich prüfe:</strong></p>
+                <ul>
+                    <li>Riester-Rente: Förderberechtigung, optimale Einzahlungshöhe, Zulagen</li>
+                    <li>Rürup-Rente (Basisrente): Steuerlicher Abzug, Sonderausgaben</li>
+                    <li>Betriebliche Altersvorsorge (bAV): Entgeltumwandlung, Arbeitgeberanteil</li>
+                    <li>Wohn-Riester: Eigenheim steuerlich fördern lassen</li>
+                    <li>Kinderzulagen und Kindergeld-Optimierung</li>
+                    <li>Steuerklassenwahl für Ehepaare und Lebenspartnerschaften</li>
+                    <li>Vermögenswirksame Leistungen (VL) und Arbeitnehmer-Sparzulage</li>
+                    <li>Handwerkerleistungen und haushaltsnahe Dienstleistungen absetzen</li>
+                </ul>
+
+                <h3>Warum die meisten Vorteile ungenutzt bleiben</h3>
+                <p>Das deutsche Steuerrecht ist komplex. Selbst gut informierte Menschen übersehen regelmäßig Vorteile, weil sie entweder nicht wissen dass es sie gibt, oder weil die Berechnung ob sich etwas lohnt aufwendig ist. Als eigenständiger Berater behalte ich den Überblick und berechne für dich konkret, was sich wann in welcher Höhe lohnt.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="persona-section">
+        <div class="container">
+            <h2 class="section-title">Steuervorteile – konkret nach Personengruppe</h2>
+            <p class="section-subtitle">Die Möglichkeiten hängen stark von deiner persönlichen Situation ab. Hier sind typische Szenarien mit konkreten Beträgen.</p>
+
+            <div class="persona-grid">
+                <div class="persona-card">
+                    <div class="persona-card-header">
+                        <h3>Arbeitnehmer</h3>
+                        <p>Thomas, 34 Jahre, ledig, 52.000 Euro Brutto/Jahr</p>
+                    </div>
+                    <div class="persona-card-body">
+                        <div class="persona-item">
+                            <span class="persona-item-label">Rürup-Rente (max. Einzahlung)</span>
+                            <span class="persona-item-value">bis zu 2.400 €/J. Steuerersparnis</span>
+                        </div>
+                        <div class="persona-item">
+                            <span class="persona-item-label">bAV Entgeltumwandlung</span>
+                            <span class="persona-item-value">ca. 900 € SV-Ersparnis/J.</span>
+                        </div>
+                        <div class="persona-item">
+                            <span class="persona-item-label">Vermögenswirksame Leistungen</span>
+                            <span class="persona-item-value">bis 80 € Zulage/J.</span>
+                        </div>
+                        <div class="persona-item">
+                            <span class="persona-item-label">Handwerker &amp; Haushalt</span>
+                            <span class="persona-item-value">bis 5.200 € absetzbar</span>
+                        </div>
+                        <div class="persona-total">
+                            <div class="persona-total-label">Typische Gesamtersparnis pro Jahr</div>
+                            <div class="persona-total-value">3.500 – 5.000 €</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="persona-card">
+                    <div class="persona-card-header">
+                        <h3>Familie mit Kindern</h3>
+                        <p>Familie Weber, 2 Kinder, 75.000 Euro Haushalts-Brutto</p>
+                    </div>
+                    <div class="persona-card-body">
+                        <div class="persona-item">
+                            <span class="persona-item-label">Riester-Rente (beide Partner)</span>
+                            <span class="persona-item-value">bis zu 840 € Zulagen/J.</span>
+                        </div>
+                        <div class="persona-item">
+                            <span class="persona-item-label">Kinderzulagen Riester (2 Kinder)</span>
+                            <span class="persona-item-value">570 € Zulagen/J.</span>
+                        </div>
+                        <div class="persona-item">
+                            <span class="persona-item-label">Steuerklassen-Optimierung</span>
+                            <span class="persona-item-value">bis zu 2.400 €/J. Vorteil</span>
+                        </div>
+                        <div class="persona-item">
+                            <span class="persona-item-label">Kinderbetreuungskosten</span>
+                            <span class="persona-item-value">bis 4.000 € absetzbar/Kind</span>
+                        </div>
+                        <div class="persona-item">
+                            <span class="persona-item-label">bAV &amp; Wohn-Riester</span>
+                            <span class="persona-item-value">1.200 – 2.400 €/J.</span>
+                        </div>
+                        <div class="persona-total">
+                            <div class="persona-total-label">Typische Gesamtersparnis pro Jahr</div>
+                            <div class="persona-total-value">5.000 – 8.000 €</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="persona-card">
+                    <div class="persona-card-header">
+                        <h3>Selbstständige</h3>
+                        <p>Sandra, Freiberuflerin, 80.000 Euro Jahresumsatz</p>
+                    </div>
+                    <div class="persona-card-body">
+                        <div class="persona-item">
+                            <span class="persona-item-label">Rürup-Rente (max. Einzahlung)</span>
+                            <span class="persona-item-value">bis zu 6.700 €/J. Steuerersparnis</span>
+                        </div>
+                        <div class="persona-item">
+                            <span class="persona-item-label">Investitionsabzugsbetrag (IAB)</span>
+                            <span class="persona-item-value">bis zu 50% Abzug auf Investitionen</span>
+                        </div>
+                        <div class="persona-item">
+                            <span class="persona-item-label">Homeoffice-Pauschale</span>
+                            <span class="persona-item-value">1.260 € absetzbar/J.</span>
+                        </div>
+                        <div class="persona-item">
+                            <span class="persona-item-label">Krankenversicherung absetzbar</span>
+                            <span class="persona-item-value">PKV-Beiträge voll absetzbar</span>
+                        </div>
+                        <div class="persona-item">
+                            <span class="persona-item-label">BU-Versicherung absetzbar</span>
+                            <span class="persona-item-value">Sonderausgaben</span>
+                        </div>
+                        <div class="persona-total">
+                            <div class="persona-total-label">Typische Gesamtersparnis pro Jahr</div>
+                            <div class="persona-total-value">7.000 – 12.000 €</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="disclaimer">
+                <p><strong>Hinweis:</strong> Die aufgeführten Beträge sind Beispielrechnungen. Die tatsächliche Steuerersparnis hängt von deinem individuellen Steuersatz, deiner Einkommenshöhe und weiteren persönlichen Faktoren ab. In einem persönlichen Gespräch berechne ich dein konkretes Potenzial.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">Die wichtigsten Instrumente im Detail</h2>
+            <p class="section-subtitle">Wie Riester, Rürup, bAV und Co. wirklich funktionieren</p>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3>Riester-Rente</h3>
+                    <span class="tag">Arbeitnehmer &amp; Beamte</span>
+                    <p>Die Riester-Rente kombiniert staatliche Zulagen mit Steuervorteilen. Sie eignet sich besonders für Familien mit Kindern, da die Kinderzulagen erheblich sind.</p>
+                    <div class="product-detail">
+                        <span>Grundzulage pro Person</span>
+                        <span>175 €/Jahr</span>
+                    </div>
+                    <div class="product-detail">
+                        <span>Kinderzulage (ab 2008 geboren)</span>
+                        <span>300 €/Kind/Jahr</span>
+                    </div>
+                    <div class="product-detail">
+                        <span>Max. steuerlicher Sonderausgabenabzug</span>
+                        <span>2.100 €/Jahr</span>
+                    </div>
+                    <div class="product-detail">
+                        <span>Mindesteinzahlung für volle Zulage</span>
+                        <span>4% Bruttoeinkommen</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <h3>Rürup-Rente</h3>
+                    <span class="tag">Selbstständige &amp; Gutverdiener</span>
+                    <p>Die Basisrente (Rürup) ist besonders für Selbstständige und Gutverdiener attraktiv. Beiträge werden als Sonderausgaben steuerlich anerkannt – in hohen Steuersätzen besonders wertvoll.</p>
+                    <div class="product-detail">
+                        <span>Max. absetzbare Einzahlung 2026</span>
+                        <span>29.344 € (Single)</span>
+                    </div>
+                    <div class="product-detail">
+                        <span>Max. absetzbare Einzahlung (Paare)</span>
+                        <span>58.688 €</span>
+                    </div>
+                    <div class="product-detail">
+                        <span>Steuerlicher Abzugssatz 2026</span>
+                        <span>100%</span>
+                    </div>
+                    <div class="product-detail">
+                        <span>Typische Steuerersparnis (42% Satz)</span>
+                        <span>bis 12.324 €/Jahr</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <h3>Betriebliche AV (bAV)</h3>
+                    <span class="tag">Arbeitnehmer</span>
+                    <p>Durch Entgeltumwandlung wird ein Teil deines Bruttogehalts direkt in die Altersvorsorge eingezahlt – vor Steuern und Sozialabgaben. So sparst du doppelt.</p>
+                    <div class="product-detail">
+                        <span>Steuerfreier Höchstbetrag 2026</span>
+                        <span>3.624 €/Jahr</span>
+                    </div>
+                    <div class="product-detail">
+                        <span>SV-freier Betrag</span>
+                        <span>3.624 €/Jahr</span>
+                    </div>
+                    <div class="product-detail">
+                        <span>Pflichtiger AG-Zuschuss</span>
+                        <span>15% des Umwandlungsbetrags</span>
+                    </div>
+                    <div class="product-detail">
+                        <span>Effektiver Kostenvorteil (42% Satz)</span>
+                        <span>bis 58% auf eingezahlten Beitrag</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <h3>Wohn-Riester</h3>
+                    <span class="tag">Immobilieneigentümer</span>
+                    <p>Wohn-Riester ermöglicht die Nutzung von Riester-Förderung für selbst genutztes Wohneigentum. Entweder für den Erwerb oder die tilgungsfreie Entnahme aus bestehendem Riester-Vertrag.</p>
+                    <div class="product-detail">
+                        <span>Wohnförderkonto</span>
+                        <span>Alle Entnahmen werden erfasst</span>
+                    </div>
+                    <div class="product-detail">
+                        <span>Nachgelagerte Besteuerung</span>
+                        <span>Im Rentenalter (günstigerer Satz)</span>
+                    </div>
+                    <div class="product-detail">
+                        <span>Kombination mit Zulagen möglich</span>
+                        <span>Ja</span>
+                    </div>
+                    <div class="product-detail">
+                        <span>Förderung Eigenkapital</span>
+                        <span>Bis 75.000 € entnehmbar</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <h3>Vermögenswirksame Leistungen</h3>
+                    <span class="tag">Arbeitnehmer</span>
+                    <p>VL sind zusätzliche Leistungen des Arbeitgebers zur Vermögensbildung. Viele Arbeitnehmer nehmen sie nicht vollständig in Anspruch – oft ein unbewusster Fehler.</p>
+                    <div class="product-detail">
+                        <span>Max. VL-Betrag</span>
+                        <span>40 €/Monat</span>
+                    </div>
+                    <div class="product-detail">
+                        <span>Arbeitnehmer-Sparzulage (Fonds)</span>
+                        <span>20% auf 400 €/J. = 80 €</span>
+                    </div>
+                    <div class="product-detail">
+                        <span>Einkommensgrenze</span>
+                        <span>40.000 € (Single)</span>
+                    </div>
+                    <div class="product-detail">
+                        <span>Bindungsdauer</span>
+                        <span>7 Jahre (Sperrfrist)</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <h3>Handwerker &amp; Haushalt</h3>
+                    <span class="tag">Alle Haushalte</span>
+                    <p>Ausgaben für haushaltsnahe Dienstleistungen und Handwerkerleistungen können direkt von der Steuerschuld abgezogen werden – nicht nur vom zu versteuernden Einkommen.</p>
+                    <div class="product-detail">
+                        <span>Handwerkerleistungen</span>
+                        <span>20% von max. 6.000 € = 1.200 €</span>
+                    </div>
+                    <div class="product-detail">
+                        <span>Haushaltsnahe Dienstleistungen</span>
+                        <span>20% von max. 20.000 € = 4.000 €</span>
+                    </div>
+                    <div class="product-detail">
+                        <span>Pflegeleistungen</span>
+                        <span>20% von max. 20.000 €</span>
+                    </div>
+                    <div class="product-detail">
+                        <span>Wichtig: Nur Lohnkosten absetzbar</span>
+                        <span>Keine Materialkosten</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: white; padding: 5rem 0;">
+        <div class="container">
+            <h2 class="section-title">Konkrete Beispielrechnung: bAV Entgeltumwandlung</h2>
+            <p class="section-subtitle">Wie 200 Euro Eigenleistung zu 200 Euro zusätzlicher Altersvorsorge werden</p>
+
+            <div class="highlight-box">
+                <h3>Beispiel: Maria, Steuersatz 30%, Sozialabgaben 20%</h3>
+                <div class="highlight-row">
+                    <span class="label">Bruttogehalt monatlich</span>
+                    <span class="value">4.500 €</span>
+                </div>
+                <div class="highlight-row">
+                    <span class="label">Entgeltumwandlung in die bAV</span>
+                    <span class="value">302 €/Monat</span>
+                </div>
+                <div class="highlight-row">
+                    <span class="label">Einsparung Lohnsteuer (30%)</span>
+                    <span class="value">91 €/Monat</span>
+                </div>
+                <div class="highlight-row">
+                    <span class="label">Einsparung Sozialabgaben (ca. 20%)</span>
+                    <span class="value">60 €/Monat</span>
+                </div>
+                <div class="highlight-row">
+                    <span class="label">Pflichtiger AG-Zuschuss (15%)</span>
+                    <span class="value">45 €/Monat</span>
+                </div>
+                <div class="highlight-row">
+                    <span class="label">Netto-Eigenleistung (effektiv)</span>
+                    <span class="value">106 €/Monat</span>
+                </div>
+                <div class="highlight-row">
+                    <span class="label">Einzahlung in die bAV gesamt</span>
+                    <span class="value">347 €/Monat</span>
+                </div>
+                <div class="highlight-row">
+                    <span class="label"><strong>Hebelwirkung: 106 € netto erzeugen</strong></span>
+                    <span class="value"><strong>347 € AV-Beitrag</strong></span>
+                </div>
+            </div>
+
+            <div class="content-text">
+                <h3>Steuervorteile für Selbstständige – besonders wertvoll</h3>
+                <p>Selbstständige und Freiberufler sind bei der Altersvorsorge auf sich gestellt – aber dafür haben sie deutlich mehr steuerliche Spielräume als Arbeitnehmer. Insbesondere die Rürup-Rente bietet erhebliche Vorteile:</p>
+
+                <ul>
+                    <li><strong>100% der Beiträge absetzbar (2026):</strong> Bei einem Steuersatz von 42% bedeutet eine Einzahlung von 10.000 Euro eine Steuerersparnis von 4.200 Euro</li>
+                    <li><strong>Höhere Einzahlungsgrenzen:</strong> Bis zu 29.344 Euro (Single) können jährlich abgesetzt werden</li>
+                    <li><strong>Kombinierbar:</strong> Rürup kann mit anderen Produkten kombiniert werden</li>
+                    <li><strong>Nachgelagerte Besteuerung:</strong> Im Rentenalter wird mit deutlich niedrigerem Steuersatz besteuert</li>
+                </ul>
+
+                <h3>Zulagenberatung: Kein Geld verschenken</h3>
+                <p>Staatliche Zulagen sind kein Selbstläufer. Wer den falschen Vertrag hat oder die falsche Einzahlungshöhe wählt, bekommt nicht die maximale Förderung. Ich prüfe für dich:</p>
+
+                <ul>
+                    <li>Ob du die Grundzulage der Riester-Rente vollständig ausschöpfst</li>
+                    <li>Ob alle Kinderzulagen beantragt werden</li>
+                    <li>Ob der Dauerzulagenantrag gestellt wurde (damit du nicht jedes Jahr aktiv werden musst)</li>
+                    <li>Ob der Sockelbetrag (60 Euro Mindesteigenleistung) eingehalten wird</li>
+                    <li>Ob eine Kombination von Zulagen und Steuervorteil für dich sinnvoll ist</li>
+                </ul>
+
+                <h3>Steuerklassen-Optimierung für Ehepaare</h3>
+                <p>Die Wahl der Steuerklassenkombination hat direkten Einfluss auf dein monatliches Nettoeinkommen. Für viele Ehepaare ist die Kombination III/V günstiger als IV/IV – aber nicht für alle.</p>
+
+                <p>Ich berechne für dich, welche Kombination zu eurer Einkommenssituation passt und wie viel Unterschied die optimale Wahl im Jahr macht. Das sind oft 1.000-3.000 Euro Unterschied jährlich.</p>
+
+                <h3>Investitionsabzugsbetrag für Gewerbetreibende</h3>
+                <p>Selbstständige und Gewerbetreibende können mit dem Investitionsabzugsbetrag (IAB) geplante Investitionen steuerlich vorziehen:</p>
+
+                <ul>
+                    <li>Bis zu 200.000 Euro können als IAB in Anspruch genommen werden</li>
+                    <li>50% der geplanten Investitionskosten können vorab abgezogen werden</li>
+                    <li>Ersparnis entsteht durch Steuerstundung in einem Jahr mit hohem Gewinn</li>
+                    <li>Investition muss innerhalb von 3 Jahren tatsächlich erfolgen</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="steps-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Mein Vorgehen beim Förderungscheck</h2>
+            <p class="section-subtitle" style="color: var(--light-gray);">Von der Analyse bis zur Umsetzung – strukturiert und transparent</p>
+
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-icon">1</div>
+                    <h4>Situationsanalyse</h4>
+                    <p>Ich erfasse deine vollständige finanzielle Situation: Einkommen, Familie, bestehende Verträge, Steuererklärung.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">2</div>
+                    <h4>Potenzialermittlung</h4>
+                    <p>Systematische Prüfung aller relevanten Steuervorteile und Förderungen für deine spezifische Situation.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">3</div>
+                    <h4>Konkrete Berechnung</h4>
+                    <p>Keine abstrakten Möglichkeiten – ich rechne dir auf den Euro genau, was du bei welcher Maßnahme sparst.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">4</div>
+                    <h4>Empfehlungen</h4>
+                    <p>Du bekommst einen klaren, priorisierten Aktionsplan mit den wirkungsvollsten Maßnahmen.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">5</div>
+                    <h4>Umsetzung</h4>
+                    <p>Ich kümmere mich um alle Anträge, Formulare und Vertragsabschlüsse. Du unterschreibst nur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Häufige Fragen zu Steuervorteilen</h2>
+            <p class="section-subtitle">Alles was du zum Thema Steuersparen wissen solltest</p>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Bin ich überhaupt Riester-berechtigt?
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Riester-förderberechtigt sind alle rentenversicherungspflichtigen Arbeitnehmer, Beamte, Richter und Soldaten. Auch Pflichtversicherte in der landwirtschaftlichen Alterskasse und Eltern im Elterngeldbezug zählen dazu. Nicht berechtigt sind Selbstständige (für die gibt es dafür die Rürup-Rente), Studenten ohne Pflichtversicherung und Personen im Ruhestand. Im kostenlosen Erstgespräch prüfe ich deine individuelle Berechtigung.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Lohnt sich die Riester-Rente noch in 2026?
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Das hängt stark von deiner Situation ab. Für Familien mit mehreren Kindern ist Riester fast immer attraktiv – allein durch die Kinderzulagen (300 Euro pro Kind/Jahr) und die Grundzulage (175 Euro) kommen erhebliche staatliche Zuschüsse zusammen. Für Kinderlose mit mittlerem Einkommen sollte der steuerliche Vorteil mit alternativen Anlageformen verglichen werden. Ich berechne für dich konkret die tatsächliche Rendite unter Berücksichtigung der nachgelagerten Besteuerung.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Was ist der Unterschied zwischen Riester und Rürup?
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Riester ist für Arbeitnehmer und Beamte konzipiert und kombiniert staatliche Zulagen (175 Euro Grundzulage, bis 300 Euro pro Kind) mit einem steuerlichen Sonderausgabenabzug bis 2.100 Euro. Rürup (Basisrente) ist für Selbstständige konzipiert, da diese keinen Riester-Anspruch haben. Der Hauptvorteil von Rürup liegt im sehr hohen steuerlichen Abzug (bis zu 29.344 Euro bei Singles, 100% absetzbar in 2026). Gutverdiener und Selbstständige profitieren besonders von Rürup.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Wie funktioniert die betriebliche Altersvorsorge genau?
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Bei der bAV wandelst du einen Teil deines Bruttogehalts in Beiträge zur Altersvorsorge um – bevor Steuern und Sozialabgaben anfallen. Das bedeutet: Du zahlst effektiv weniger als den nominalen Beitrag, weil du Steuern und Sozialabgaben sparst. Zusätzlich ist dein Arbeitgeber seit 2019 verpflichtet, mindestens 15% des Umwandlungsbetrags zuzuschießen – bei neueren Verträgen. Im Rentenalter werden die Leistungen dann mit dem (meist niedrigeren) Rentensteuersatz versteuert.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Kann ich Vorsorgeaufwendungen unbegrenzt absetzen?
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Nein, es gibt Höchstgrenzen. Bei Vorsorgeaufwendungen für die Altersvorsorge (Rürup, gesetzliche Rentenversicherung) können Singles 2026 maximal 29.344 Euro absetzen. Bei sonstigen Vorsorgeaufwendungen (Kranken-, Pflege-, Arbeitslosenversicherung) gibt es eigene Höchstgrenzen. Der Riester-Sonderausgabenabzug ist auf 2.100 Euro begrenzt. Ich berechne für dich die genaue optimale Einzahlungshöhe.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Was passiert mit meinen Riester-Beiträgen, wenn ich ins Ausland ziehe?
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Bei Auswanderung in ein Nicht-EU-Land müssen die erhaltenen Förderungen und Steuervorteile grundsätzlich zurückgezahlt werden (sog. Rückforderung). Bei Umzug innerhalb der EU bleibt der Riester-Vertrag erhalten, allerdings entfällt die Förderung für die Zeit im Ausland. Das ist ein wichtiger Aspekt, den ich bei der Beratung berücksichtige – besonders für Personen, die einen internationalen Umzug planen.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Kann ich Handwerkerleistungen noch im gleichen Jahr absetzen?
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Ja, Handwerkerleistungen können im Jahr der Zahlung abgesetzt werden. Wichtig: Es muss eine Rechnung vorliegen und die Zahlung muss unbar erfolgen (Überweisung, kein Barzahlung). Absetzbar sind 20% der Lohnkosten bis maximal 6.000 Euro pro Jahr – also maximal 1.200 Euro direkte Steuerersparnis. Materialkosten sind nicht absetzbar. Leistungen im Eigenheim, in der Mietwohnung oder im Garten kommen in Frage.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Arbeiten Sie mit Steuerberatern zusammen?
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Ich berate zu steuerlichen Aspekten im Rahmen der Finanzplanung – Steuerberatung im Sinne der gesetzlichen Definition übernehme ich nicht und darf sie auch nicht. Für die konkrete Steuererklärung empfehle ich einen Steuerberater. Was ich tue: Ich identifiziere steuerliche Optimierungsmöglichkeiten durch Finanzprodukte (Altersvorsorge, Versicherungen) und zeige dir, wo du aktiv werden solltest. Auf Wunsch arbeite ich mit deinem Steuerberater zusammen.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Wie oft sollte ich meine steuerliche Situation überprüfen?
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Mindestens einmal im Jahr – idealerweise Anfang des Jahres oder nach größeren Lebensveränderungen (Heirat, Kinder, Jobwechsel, Gehaltserhöhung, Eigenheim). Die steuerlichen Rahmenbedingungen ändern sich jährlich (Freibeträge, Höchstbeträge), und auch deine persönliche Situation entwickelt sich. Ich erinnere dich jährlich und überprüfe proaktiv, ob neue Möglichkeiten entstanden sind.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Was kostet der Förderungscheck?
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Das Erstgespräch und der initiale Förderungscheck sind kostenlos und unverbindlich. Du erfährst konkret, welche Möglichkeiten du hast und wie viel du sparen kannst – ohne Verpflichtung. Wenn wir gemeinsam Maßnahmen umsetzen, erhalte ich ggf. Provisionen von Produktanbietern, die ich dir transparent offenlege. Für dich entstehen dabei keine Mehrkosten – im Gegenteil, durch die Steuerersparnisse sparst du oft ein Vielfaches.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Stopp mit unnötiger Steuer</h2>
+            <p>Finde jetzt heraus, wie viel Steuerersparnis in deiner Situation steckt</p>
+            <button class="btn" onclick="openModal()">Kostenlosen Förderungscheck anfragen</button>
+        </div>
+    </section>
+
+    <footer id="kontakt">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>EM Finanzen</h4>
+                    <p>Dein Weg. Deine Zukunft.</p>
+                    <p>Erik Manvajler<br>Eigenständiger Finanzberater</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Leistungen</h4>
+                    <a href="versicherungen.html">Versicherungen</a>
+                    <a href="altersvorsorge.html">Altersvorsorge</a>
+                    <a href="vermoegensaufbau.html">Vermögensaufbau</a>
+                    <a href="finanzierung.html">Finanzierung</a>
+                    <a href="haushaltsoptimierung.html">Haushaltsoptimierung</a>
+                    <a href="steuervorteile.html">Steuervorteile</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p>41640 Neuss & 27404 Zeven</p>
+                    <p>+49 123 456 7890</p>
+                    <p>info@em-finanzen.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Rechtliches</h4>
+                    <a href="impressum.html">Impressum</a>
+                    <a href="datenschutz.html">Datenschutz</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EM Finanzen. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Termin vereinbaren</h3>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+
+            <div class="booking-options">
+                <div class="booking-option" onclick="selectBooking(this, 'erstgespraech')">
+                    <h4>Erstgespräch (30 Min.)</h4>
+                    <p>Kostenloser Überblick über deine Möglichkeiten. Kein Fachwissen nötig – ich erkläre alles verständlich.</p>
+                </div>
+                <div class="booking-option" onclick="selectBooking(this, 'finanzanalyse')">
+                    <h4>Förderungscheck (60 Min.)</h4>
+                    <p>Vollständige Analyse aller steuerlichen Vorteile und Förderungen. Mit konkreten Zahlen und Aktionsplan.</p>
+                </div>
+                <div class="booking-option" onclick="selectBooking(this, 'rueckruf')">
+                    <h4>Rückruf vereinbaren (15 Min.)</h4>
+                    <p>Kurze Ersteinschätzung am Telefon. Ideal wenn du noch unsicher bist, ob das Thema für dich relevant ist.</p>
+                </div>
+            </div>
+
+            <form id="bookingForm">
+                <input type="hidden" id="bookingType" name="bookingType" value="">
+
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="situation">Deine Situation</label>
+                    <select id="situation" name="situation">
+                        <option value="">Bitte auswählen...</option>
+                        <option value="arbeitnehmer">Arbeitnehmer</option>
+                        <option value="selbststaendig">Selbstständig / Freiberufler</option>
+                        <option value="familie">Familie mit Kindern</option>
+                        <option value="beamter">Beamter</option>
+                        <option value="rentner">Rentner</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-Mail *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefon *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Was interessiert dich besonders? (optional)</label>
+                    <textarea id="message" name="message" rows="3" placeholder="z.B. Riester-Rente, bAV, Steuerklasse..."></textarea>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%;">Termin anfragen – kostenlos</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        // Mobile nav toggle
+        function toggleNav() {
+            document.getElementById('nav').classList.toggle('open');
+            document.querySelector('.mobile-toggle').classList.toggle('active');
+        }
+        document.querySelectorAll('#nav a').forEach(l => l.addEventListener('click', () => {
+            document.getElementById('nav').classList.remove('open');
+            document.querySelector('.mobile-toggle').classList.remove('active');
+        }));
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
+                if (!isActive) faqItem.classList.add('active');
+            });
+        });
+
+        function openModal() {
+            document.getElementById('bookingModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        // Alias for consistency with other pages
+        function openBooking(e) { if(e) e.preventDefault(); openModal(); }
+
+        function closeModal() {
+            document.getElementById('bookingModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function selectBooking(element, type) {
+            document.querySelectorAll('.booking-option').forEach(o => o.classList.remove('selected'));
+            element.classList.add('selected');
+            document.getElementById('bookingType').value = type;
+        }
+
+        document.getElementById('bookingModal').addEventListener('click', (e) => {
+            if (e.target.id === 'bookingModal') closeModal();
+        });
+
+        document.getElementById('bookingForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Vielen Dank! Ich melde mich innerhalb von 24 Stunden bei Ihnen.');
+            closeModal();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Altersvorsorge mit EM Finanzen: Rentenlücke schließen, Riester, Rürup, bAV und ETF-Sparpläne. Jetzt kostenlose Beratung vereinbaren.">
+    <meta name="keywords" content="Altersvorsorge, Rentenlücke, Riester, Rürup, betriebliche Altersvorsorge, Rente, ETF Sparplan, Zeven, Erik Manvajler">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Erik Manvajler - EM Finanzen">
+    <meta property="og:title" content="Altersvorsorge | EM Finanzen - Erik Manvajler">
+    <meta property="og:description" content="Rentenlücke schließen mit Riester, Rürup, bAV und ETF-Sparplänen. Kostenlose Altersvorsorge-Beratung bei EM Finanzen in Zeven.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:url" content="https://emfinanzen.de/altersvorsorge.html">
+    <title>Altersvorsorge | EM Finanzen - Erik Manvajler</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="fonts/fonts.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #0c1929;
+            --primary: #1e3a5f;
+            --primary-light: #3b82f6;
+            --gold: #06b6d4;
+            --gold-light: #22d3ee;
+            --indigo-400: #818cf8;
+            --blue-700: #1e40af;
+            --off-white: #f8fafc;
+            --light-gray: #e2e8f0;
+            --mid-gray: #94a3b8;
+            --dark-gray: #475569;
+            --black: #0f172a;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--primary-dark);
+            color: var(--off-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(12, 25, 41, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--off-white);
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .logo-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 0.7rem;
+            color: var(--mid-gray);
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--off-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .cta-btn {
+            background: linear-gradient(90deg, var(--gold), var(--primary-light));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(6, 182, 212, 0.3);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 140px 0 80px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(30, 58, 95, 0.3) 0%, rgba(12, 25, 41, 0) 100%);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, var(--gold-light), var(--primary-light), var(--indigo-400));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--mid-gray);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+            color: var(--mid-gray);
+        }
+
+        .breadcrumb a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Content */
+        .content-section {
+            padding: 4rem 0;
+        }
+
+        .content-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--gold-light);
+        }
+
+        .content-section h3 {
+            font-size: 1.8rem;
+            margin: 2.5rem 0 1rem;
+            color: var(--gold);
+        }
+
+        .content-section p {
+            margin-bottom: 1.5rem;
+            color: var(--light-gray);
+            font-size: 1.1rem;
+        }
+
+        .rentenluecke-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 2px solid rgba(239, 68, 68, 0.4);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .rentenluecke-box h3 {
+            color: #fca5a5;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .rentenluecke-number {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #ef4444;
+            font-family: 'Cormorant Garamond', serif;
+            display: block;
+            margin: 1rem 0;
+        }
+
+        .rentenluecke-box p {
+            font-size: 1.15rem;
+            color: var(--light-gray);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .product-card {
+            background: rgba(30, 58, 95, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+        }
+
+        .product-badge {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--gold), var(--primary-light));
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .product-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--gold-light);
+        }
+
+        .product-card p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-pros {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .product-pros li {
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--light-gray);
+            font-size: 0.95rem;
+        }
+
+        .product-pros li::before {
+            content: '+';
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+            font-weight: 700;
+        }
+
+        .product-cons {
+            list-style: none;
+            margin-top: 0.5rem;
+        }
+
+        .product-cons li {
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--mid-gray);
+            font-size: 0.95rem;
+        }
+
+        .product-cons li::before {
+            content: '−';
+            position: absolute;
+            left: 0;
+            color: #f59e0b;
+            font-weight: 700;
+        }
+
+        /* Calculator Example */
+        .calculator-section {
+            background: rgba(30, 58, 95, 0.3);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 16px;
+            padding: 3rem;
+            margin: 3rem 0;
+        }
+
+        .calculator-section h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .calc-scenarios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .calc-scenario {
+            background: rgba(12, 25, 41, 0.5);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .calc-scenario h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--gold-light);
+        }
+
+        .calc-scenario .amount {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #22c55e;
+            display: block;
+            margin: 0.5rem 0;
+        }
+
+        .calc-scenario .detail {
+            font-size: 0.9rem;
+            color: var(--mid-gray);
+        }
+
+        .calc-input {
+            background: rgba(6, 182, 212, 0.15);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .calc-input-item {
+            text-align: center;
+        }
+
+        .calc-input-item label {
+            display: block;
+            color: var(--mid-gray);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .calc-input-item strong {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--gold-light);
+        }
+
+        .compound-visual {
+            margin: 2rem 0;
+        }
+
+        .growth-bar {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .growth-label {
+            min-width: 80px;
+            font-size: 0.9rem;
+            color: var(--mid-gray);
+        }
+
+        .growth-track {
+            flex: 1;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .growth-fill {
+            height: 100%;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            padding-left: 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: width 1s ease;
+        }
+
+        .info-highlight {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(59, 130, 246, 0.15));
+            border-left: 4px solid var(--gold);
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .info-highlight p {
+            margin: 0;
+            font-style: italic;
+            font-size: 1.15rem;
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 4rem 0;
+            background: rgba(30, 58, 95, 0.2);
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            color: var(--gold-light);
+        }
+
+        .faq-item {
+            background: rgba(12, 25, 41, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            color: var(--off-white);
+            text-align: left;
+            padding: 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .faq-question:hover {
+            color: var(--gold);
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+            font-size: 1.5rem;
+            color: var(--gold);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--light-gray);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 5rem 0;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(59, 130, 246, 0.1));
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.25rem;
+            color: var(--mid-gray);
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--gold), var(--primary-light));
+            color: white;
+            padding: 1.25rem 3rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(6, 182, 212, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(12, 25, 41, 0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--mid-gray);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--primary-dark);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: var(--mid-gray);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .modal-close:hover {
+            color: var(--off-white);
+        }
+
+        .modal h3 {
+            margin-bottom: 1.5rem;
+            color: var(--gold-light);
+        }
+
+        .booking-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .booking-option {
+            background: rgba(30, 58, 95, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: var(--off-white);
+            transition: all 0.3s;
+        }
+
+        .booking-option:hover {
+            border-color: var(--gold);
+            transform: translateX(5px);
+        }
+
+        .booking-option h4 {
+            margin-bottom: 0.5rem;
+            color: var(--gold);
+        }
+
+        .booking-option p {
+            margin: 0;
+            color: var(--mid-gray);
+            font-size: 0.95rem;
+        }
+
+        .drei-saeulen {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .saeule {
+            text-align: center;
+            background: rgba(30, 58, 95, 0.3);
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .saeule .saeule-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .saeule h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: var(--gold-light);
+        }
+
+        .saeule p {
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0; right: 0;
+                background: rgba(12, 25, 41, 0.98);
+                padding: 1.5rem;
+                gap: 1rem;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                z-index: 999;
+            }
+            .nav-links.open { display: flex; }
+            .mobile-menu-btn { display: flex !important; }
+            nav { position: relative; }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            .calc-scenarios {
+                grid-template-columns: 1fr 1fr;
+            }
+            .drei-saeulen {
+                grid-template-columns: 1fr;
+            }
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            .hero { padding-top: 110px; }
+        }
+
+        /* Scroll progress */
+        .scroll-progress {
+            position: fixed;
+            top: 0; left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--primary-light), var(--indigo-400));
+            z-index: 10000;
+            width: 0;
+            transition: width 0.1s linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg width="32" height="16" viewBox="0 0 60 30" fill="none">
+                        <defs><linearGradient id="hCrown" x1="12" y1="14" x2="48" y2="14" gradientUnits="userSpaceOnUse"><stop stop-color="#06b6d4"/><stop offset=".5" stop-color="#3b82f6"/><stop offset="1" stop-color="#1e40af"/></linearGradient></defs>
+                        <path d="M12 26 L20 10 L26 18 L30 4 L34 18 L40 10 L48 26" stroke="url(#hCrown)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <circle cx="20" cy="9" r="2.5" fill="#3b82f6"/><circle cx="30" cy="3" r="3" fill="#1e40af"/><circle cx="40" cy="9" r="2.5" fill="#3b82f6"/>
+                    </svg>
+                    <span style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:24px;letter-spacing:0.08em;color:#f8fafc;line-height:1;margin-top:-2px;">EM</span>
+                    <div style="width:30px;height:2px;background:linear-gradient(90deg,#06b6d4,#3b82f6,#1e40af);border-radius:1px;margin-top:1px;"></div>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                    <span class="logo-text" style="color:#f8fafc;">EM Finanzen</span>
+                    <span class="logo-tagline">Dein Weg. Deine Zukunft.</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">Über mich</a></li>
+                <li><a href="index.html#services">Leistungen</a></li>
+                <li><a href="index.html#check">Finanz-Check</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="#" class="cta-btn" onclick="openBooking(event)">Termin buchen</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleNav()" aria-label="Menü öffnen" style="display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;">
+                <span style="width:24px;height:2px;background:var(--off-white);display:block;transition:all 0.3s;"></span>
+                <span style="width:24px;height:2px;background:var(--off-white);display:block;transition:all 0.3s;"></span>
+                <span style="width:24px;height:2px;background:var(--off-white);display:block;transition:all 0.3s;"></span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Altersvorsorge</h1>
+            <p>Sichert dir dein Leben im Alter – bevor der Staat entscheidet, wie viel du kriegst.</p>
+            <div class="breadcrumb">
+                <a href="index.html">Startseite</a>
+                <span>→</span>
+                <span>Altersvorsorge</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2>Die Realität der deutschen Rente</h2>
+            <p>Du arbeitest 40 Jahre lang, zahlst brav in die Rentenversicherung ein – und bekommst im Alter vielleicht 48% deines letzten Nettoeinkommens. Klingt schon nicht toll. Aber in der Realität sieht es noch schlechter aus: Das Rentenniveau ist seit Jahren am Sinken, und viele Deutsche erhalten weit weniger als das offizielle Niveau vermuten lässt.</p>
+
+            <p>Dazu kommen Steuern auf die Rente (bis 2040 vollständig steuerpflichtig), Abzüge für Kranken- und Pflegeversicherung, und die Kaufkraftverluste durch Inflation. Am Ende bleibt oft erschreckend wenig übrig.</p>
+
+            <div class="rentenluecke-box">
+                <h3>Die Rentenlücke – dein Problem</h3>
+                <span class="rentenluecke-number">-40 bis -60%</span>
+                <p>So viel weniger Geld steht durchschnittlichen deutschen Rentnerinnen und Rentnern im Alter zur Verfügung verglichen mit ihrem Erwerbseinkommen. Ohne private Vorsorge wird der Lebensstandard drastisch sinken.</p>
+            </div>
+
+            <h3>Ein konkretes Beispiel</h3>
+            <p>Stell dir vor, du verdienst heute 3.000 Euro netto. Du bist daran gewohnt, damit dein Leben zu gestalten: Miete, Lebensmittel, Urlaub, Hobbys, eventuell noch Kredite abbezahlen. Im Alter bekommst du vielleicht 1.400 Euro gesetzliche Rente. Nach Abzügen für Kranken- und Pflegeversicherung bleiben dir vielleicht 1.200 Euro. Das ist eine Rentenlücke von 1.800 Euro – jeden Monat, für den Rest deines Lebens.</p>
+
+            <p>Diese Lücke musst du schließen. Und je frühzeitiger du damit anfängst, desto einfacher – und günstiger – ist es.</p>
+
+            <div class="drei-saeulen">
+                <div class="saeule">
+                    <div class="saeule-icon">🏛</div>
+                    <h4>1. Säule</h4>
+                    <p>Gesetzliche Rentenversicherung – die Basis, die immer weniger wird</p>
+                </div>
+                <div class="saeule">
+                    <div class="saeule-icon">🏢</div>
+                    <h4>2. Säule</h4>
+                    <p>Betriebliche Altersvorsorge – oft mit Arbeitgeberzuschuss, oft unterschätzt</p>
+                </div>
+                <div class="saeule">
+                    <div class="saeule-icon">👤</div>
+                    <h4>3. Säule</h4>
+                    <p>Private Vorsorge – hier entscheidest du selbst und baust echtes Vermögen</p>
+                </div>
+            </div>
+
+            <h2>Die Macht des frühen Starts – Zinseszins</h2>
+            <p>Der Zinseszins ist dein mächtigster Verbündeter beim Vermögensaufbau. Einstein soll ihn als "achtes Weltwunder" bezeichnet haben. Warum? Weil dein Geld nicht nur Zinsen bringt – es bringt auch Zinsen auf die Zinsen, und Zinsen auf die Zinsen der Zinsen. Mit der Zeit wird dieser Effekt immer mächtiger.</p>
+
+            <div class="calculator-section">
+                <h3>Rechenbeispiel: Was 200 Euro/Monat bewirken</h3>
+                <div class="calc-input">
+                    <div class="calc-input-item">
+                        <label>Monatlicher Sparbetrag</label>
+                        <strong>200 €</strong>
+                    </div>
+                    <div class="calc-input-item">
+                        <label>Angenommene Rendite p.a.</label>
+                        <strong>7 %</strong>
+                    </div>
+                    <div class="calc-input-item">
+                        <label>Vergleich: Renteneintritt mit 67</label>
+                        <strong>→</strong>
+                    </div>
+                </div>
+
+                <div class="compound-visual">
+                    <div class="growth-bar">
+                        <span class="growth-label">Ab 25</span>
+                        <div class="growth-track">
+                            <div class="growth-fill" style="width: 100%; background: linear-gradient(90deg, #22c55e, #16a34a);">524.000 €</div>
+                        </div>
+                    </div>
+                    <div class="growth-bar">
+                        <span class="growth-label">Ab 30</span>
+                        <div class="growth-track">
+                            <div class="growth-fill" style="width: 72%; background: linear-gradient(90deg, #06b6d4, #0891b2);">368.000 €</div>
+                        </div>
+                    </div>
+                    <div class="growth-bar">
+                        <span class="growth-label">Ab 35</span>
+                        <div class="growth-track">
+                            <div class="growth-fill" style="width: 49%; background: linear-gradient(90deg, #3b82f6, #2563eb);">253.000 €</div>
+                        </div>
+                    </div>
+                    <div class="growth-bar">
+                        <span class="growth-label">Ab 40</span>
+                        <div class="growth-track">
+                            <div class="growth-fill" style="width: 32%; background: linear-gradient(90deg, #818cf8, #6366f1);">168.000 €</div>
+                        </div>
+                    </div>
+                    <div class="growth-bar">
+                        <span class="growth-label">Ab 45</span>
+                        <div class="growth-track">
+                            <div class="growth-fill" style="width: 19%; background: linear-gradient(90deg, #f59e0b, #d97706);">100.000 €</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calc-scenarios">
+                    <div class="calc-scenario">
+                        <h4>Mit 25 starten</h4>
+                        <span class="amount">524.000 €</span>
+                        <span class="detail">Eingezahlt: 100.800 €<br>Zinsgewinn: 423.200 €</span>
+                    </div>
+                    <div class="calc-scenario">
+                        <h4>Mit 30 starten</h4>
+                        <span class="amount">368.000 €</span>
+                        <span class="detail">Eingezahlt: 88.800 €<br>Zinsgewinn: 279.200 €</span>
+                    </div>
+                    <div class="calc-scenario">
+                        <h4>Mit 35 starten</h4>
+                        <span class="amount">253.000 €</span>
+                        <span class="detail">Eingezahlt: 76.800 €<br>Zinsgewinn: 176.200 €</span>
+                    </div>
+                    <div class="calc-scenario">
+                        <h4>Mit 40 starten</h4>
+                        <span class="amount">168.000 €</span>
+                        <span class="detail">Eingezahlt: 64.800 €<br>Zinsgewinn: 103.200 €</span>
+                    </div>
+                </div>
+
+                <div class="info-highlight" style="margin-top: 2rem;">
+                    <p>Wer mit 25 statt mit 40 startet, hat am Ende uber 3-mal so viel Kapital – obwohl er nur 36.000 Euro mehr eingezahlt hat. Die restlichen 256.000 Euro kommen vom Zinseszins. Jedes Jahr Warten kostet dich im Schnitt zwischen 15.000 und 30.000 Euro Endvermogen.</p>
+                </div>
+            </div>
+
+            <h2>Die Vorsorgeprodukte im Überblick</h2>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <span class="product-badge">Staat fordert</span>
+                    <h4>Riester-Rente</h4>
+                    <p>Staatlich geforderte private Altersvorsorge mit Zulagen und Steuervorteilen. Besonders attraktiv für Familien mit Kindern und Geringverdienern.</p>
+                    <ul class="product-pros">
+                        <li>175 Euro Grundzulage/Jahr</li>
+                        <li>300 Euro je Kind/Jahr (ab 2008 geboren)</li>
+                        <li>Steuerlich absetzbar (bis 2.100 Euro)</li>
+                        <li>Kapitalgarantie der Einlagen</li>
+                    </ul>
+                    <ul class="product-cons">
+                        <li>Nachgelagerte Besteuerung im Alter</li>
+                        <li>Weniger attraktiv fur Gutverdiener ohne Kinder</li>
+                        <li>Rentenform im Alter vorgeschrieben</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-badge">Selbstständige</span>
+                    <h4>Rürup-Rente (Basisrente)</h4>
+                    <p>Die Riester-Alternative für Selbstständige und Gutverdiener. Massiver Steuervorteil durch sehr hohe absetzbare Beiträge.</p>
+                    <ul class="product-pros">
+                        <li>Bis 29.344 Euro/Jahr absetzbar (2026)</li>
+                        <li>Ideal für Selbstständige ohne GRV</li>
+                        <li>Pfandungssicher im Insolvenzfall</li>
+                        <li>Flexibel als ETF-Variante verfügbar</li>
+                    </ul>
+                    <ul class="product-cons">
+                        <li>Kein Kapitalwahlrecht am Ende</li>
+                        <li>Nicht ubertragbar oder belastbar</li>
+                        <li>Lebenslange Verrentung Pflicht</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-badge">Arbeitgeber zahlt mit</span>
+                    <h4>Betriebliche Altersvorsorge (bAV)</h4>
+                    <p>Vorsorge direkt über den Arbeitgeber mit gesetzlichem Zuschuss. Seit 2019 muss der Arbeitgeber mindestens 15% Zuschuss zahlen.</p>
+                    <ul class="product-pros">
+                        <li>Mind. 15% Arbeitgeberzuschuss Pflicht</li>
+                        <li>Steuer- und SV-frei in der Ansparphase</li>
+                        <li>Bis 3.624 Euro/Jahr steuerfrei</li>
+                        <li>Kein eigenes Kapitalmarktrisiko notig</li>
+                    </ul>
+                    <ul class="product-cons">
+                        <li>Abzüge im Alter für KV und PV</li>
+                        <li>Qualität hängt vom Arbeitgeber ab</li>
+                        <li>Bei Jobwechsel manchmal schwierig</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-badge">Flexibel</span>
+                    <h4>Private Rentenversicherung</h4>
+                    <p>Klassische oder fondsgebundene Rentenversicherung. Bietet Garantien und lebenslange Rente – je nach Produkt sehr unterschiedlich.</p>
+                    <ul class="product-pros">
+                        <li>Lebenslange Rente moglich</li>
+                        <li>Steuerliche Vorteile im Alter</li>
+                        <li>Hinterbliebenenschutz integrierbar</li>
+                        <li>Fondsgebunden fur hohere Rendite</li>
+                    </ul>
+                    <ul class="product-cons">
+                        <li>Klassisch: sehr niedrige Renditen</li>
+                        <li>Hohe Kostenquoten oft ein Problem</li>
+                        <li>Weniger flexibel als ETF-Sparplan</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-badge">Beste Rendite</span>
+                    <h4>ETF-Sparplan</h4>
+                    <p>Monatlich in breit gestreute Indexfonds investieren. Historisch die renditestarkste Strategie mit niedrigen Kosten.</p>
+                    <ul class="product-pros">
+                        <li>Historisch 7-9% Rendite p.a.</li>
+                        <li>Sehr niedrige Kostenquoten (ab 0,1%)</li>
+                        <li>Maximale Flexibilität und Transparenz</li>
+                        <li>Jederzeit verfügbar und anpassbar</li>
+                    </ul>
+                    <ul class="product-cons">
+                        <li>Keine staatliche Forderung</li>
+                        <li>Kein Schutz vor Kursverlusten</li>
+                        <li>Erfordert langeren Anlagehorizont</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Meine Empfehlung: Die richtige Kombination</h3>
+            <p>Die beste Altersvorsorge ist keine einzelne Lösung, sondern eine intelligente Kombination. Für Angestellte empfehle ich oft: die betriebliche Altersvorsorge maximal ausnutzen (vor allem wegen des Arbeitgeberzuschusses), zusätzlich einen ETF-Sparplan für Flexibilität und maximale Rendite, und je nach steuerlicher Situation einen Riester- oder Rürup-Vertrag. Für Selbstständige sieht die Strategie komplett anders aus.</p>
+
+            <p>Das Schone: Es gibt keine Einheitslosung, aber es gibt fur jeden die passende. Genau das finden wir gemeinsam heraus.</p>
+
+            <div class="info-highlight">
+                <p>"Wer mit der Altersvorsorge wartet, bis er es sich leisten kann, wartet zu lang. Die beste Zeit zu starten war gestern. Die zweitbeste ist heute." – Ein Grundsatz, der sich in Zahlen auszahlt.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2>Häufige Fragen zur Altersvorsorge</h2>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Wie viel Rente werde ich eigentlich bekommen?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Du bekommst von der Deutschen Rentenversicherung jedes Jahr eine Renteninformation zugeschickt. Diese zeigt dir deine voraussichtliche Rente. Wichtig: Diese Zahlen sind oft zu optimistisch, weil sie von einem gleichbleibenden Rentenniveau ausgehen. Realistisch solltest du eher 40-50% deines aktuellen Nettoeinkommens als gesetzliche Rente einplanen – und auch das nach Steuern und Abzügen noch einmal reduzieren.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Ich bin 45 – ist es nicht schon zu spat?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Nein, es ist nie zu spät. Mit 45 hast du noch 22 Jahre bis zur Rente. Selbst wenn du "nur" 300 Euro monatlich anlegst, kannst du bei 7% durchschnittlicher Rendite noch ca. 185.000 Euro aufbauen. Das ist kein Vermögen für eine frühe Rente, aber eine erhebliche Ergänzung zur gesetzlichen Rente. Dazu kommen steuerliche Vorteile, die du nutzen kannst. Je früher du jetzt anfängst, desto besser – aber warten macht es nur schlimmer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Sollte ich Riester oder ETF-Sparplan machen?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Das hängt stark von deiner Situation ab. Riester lohnt sich besonders, wenn du Kinder hast (bis zu 300 Euro Zulage/Kind) oder wenig verdienst (wegen der Grundzulage von 175 Euro). Für kinderlose Gutverdiener ist ein ETF-Sparplan oft die bessere Wahl: mehr Rendite, mehr Flexibilität, keine komplizierte Verwaltung. In vielen Fällen ist eine Kombination sinnvoll. Das besprechen wir in deiner individuellen Beratung.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Wie viel sollte ich monatlich für die Altersvorsorge zurücklegen?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Als Faustregel gelten 10-15% des Bruttoeinkommens. Das klingt viel, aber: Riester-Zulagen, Steuerersparnisse und Arbeitgeberbeiträge zur bAV zählen da schon mit rein. Wenn du 3.000 Euro brutto verdienst, solltest du monatlich zwischen 300 und 450 Euro in die Altersvorsorge stecken – in verschiedenen Töpfen verteilt. Wie viel du wirklich brauchst, berechnen wir gemeinsam auf Basis deiner persönlichen Rentenlücke.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Was passiert mit meiner Altersvorsorge, wenn ich stirbe?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Das ist produktabhangig. Bei ETF-Sparplänen und privaten Rentenversicherungen geht das angesparte Kapital an deine Erben. Bei der gesetzlichen Rente gibt es eine Witwen- bzw. Witwerrente, aber das gesparte Kapital "verfällt". Bei Riester hangt es davon ab, in welcher Phase du bist. Ich empfehle, bei der Planung auch den Todes- und Invaliditätsfall zu bedenken – das ist ein wichtiger Baustein der Gesamtplanung.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Ich bin selbstständig und habe keine gesetzliche Rentenversicherung. Was soll ich tun?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Als Selbstständiger bist du auf dich allein gestellt – und das macht Altersvorsorge umso wichtiger. Deine Optionen: Rürup-Rente (massiver Steuervorteil, bis zu 29.344 Euro/Jahr absetzbar), ETF-Sparplan (flexibel, renditestark), Immobilien, und je nach Branche berufsständische Versorgungswerke. Eine freiwillige gesetzliche Rentenversicherung kann ebenfalls sinnvoll sein. Das optimale Konzept hängt von deinen Einkommen, Steuern und Zielen ab.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Deine Rentenlücke schließen</h2>
+            <p>Wir berechnen gemeinsam, was du brauchst – und finden den besten Weg dorthin.</p>
+            <button class="cta-button" onclick="openBooking(event)">Kostenloses Erstgespräch buchen</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EM Finanzen</h3>
+                    <p>Dein Weg. Deine Zukunft.</p>
+                    <p style="margin-top: 1rem; color: var(--mid-gray);">Eigenständige Finanzberatung in Zeven und Umgebung.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="versicherungen.html">Versicherungen</a></li>
+                        <li><a href="altersvorsorge.html">Altersvorsorge</a></li>
+                        <li><a href="vermoegensaufbau.html">Vermögensaufbau</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Rechtliches</h3>
+                    <ul>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p>Erik Manvajler</p>
+                    <p>Zeven, Deutschland</p>
+                    <p style="margin-top: 0.5rem;"><a href="#" onclick="openBooking(event)">Termin buchen</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EM Finanzen. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeBooking()">&times;</button>
+            <h3>Termin buchen</h3>
+            <p style="color: var(--mid-gray); margin-bottom: 2rem;">Wähle die passende Option für dein Anliegen:</p>
+            <div class="booking-options">
+                <a href="https://cal.com" target="_blank" class="booking-option">
+                    <h4>Erstgespräch (30 Min.)</h4>
+                    <p>Kostenloses Kennenlernen und erste Situationsanalyse</p>
+                </a>
+                <a href="https://cal.com" target="_blank" class="booking-option">
+                    <h4>Altersvorsorge-Analyse (60 Min.)</h4>
+                    <p>Detaillierte Analyse deiner Rentenlücke mit konkretem Vorsorgeplan</p>
+                </a>
+                <a href="https://cal.com" target="_blank" class="booking-option">
+                    <h4>Rückruf vereinbaren (15 Min.)</h4>
+                    <p>Kurzes Telefonat für dringende Fragen</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Altersvorsorgeberatung",
+        "provider": {
+            "@type": "FinancialService",
+            "name": "EM Finanzen",
+            "description": "Eigenständige Altersvorsorgeberatung für Riester, Rürup, bAV und ETF-Sparpläne",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Zeven",
+                "addressCountry": "DE"
+            }
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "Deutschland"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Altersvorsorgeprodukte",
+            "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Riester-Rente Beratung"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Rürup-Rente Beratung"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Betriebliche Altersvorsorge"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ETF-Sparplan Beratung"}}
+            ]
+        }
+    }
+    </script>
+
+    <script>
+        function toggleNav() {
+            var nav = document.querySelector('.nav-links');
+            if (nav) nav.classList.toggle('open');
+        }
+
+        window.addEventListener('scroll', function() {
+            var el = document.getElementById('scrollProgress');
+            var st = window.scrollY || document.documentElement.scrollTop;
+            var h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            if (el) el.style.width = (h > 0 ? (st / h * 100) : 0) + '%';
+        });
+
+        function openBooking(event) {
+            if (event) event.preventDefault();
+            document.getElementById('bookingModal').classList.add('active');
+        }
+
+        function closeBooking() {
+            document.getElementById('bookingModal').classList.remove('active');
+        }
+
+        document.getElementById('bookingModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeBooking();
+            }
+        });
+
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const isActive = faqItem.classList.contains('active');
+
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').style.maxHeight = null;
+                });
+
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

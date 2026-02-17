@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 70" width="360" height="70">
+  <defs>
+    <linearGradient id="crownHD" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="lineHD" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&amp;family=DM+Sans:wght@500;600&amp;display=swap');
+    </style>
+  </defs>
+  
+  <!-- Crown -->
+  <path d="M22 18 L28 6 L32 12 L35 2 L38 12 L42 6 L48 18" 
+        stroke="url(#crownHD)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="28" cy="5" r="1.5" fill="#60a5fa"/>
+  <circle cx="35" cy="1.5" r="2" fill="#93c5fd"/>
+  <circle cx="42" cy="5" r="1.5" fill="#60a5fa"/>
+  
+  <!-- EM -->
+  <text x="35" y="55" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-weight="700" font-size="42" letter-spacing="4" fill="#e2e8f0">EM</text>
+  
+  <!-- Gradient underline -->
+  <rect x="10" y="60" width="50" height="2" rx="1" fill="url(#lineHD)"/>
+  
+  <!-- Divider -->
+  <rect x="76" y="16" width="1.5" height="40" rx="0.75" fill="#334155"/>
+  
+  <!-- FINANZEN -->
+  <text x="96" y="42" font-family="'DM Sans', sans-serif" font-weight="600" font-size="22" letter-spacing="4" fill="#cbd5e1">FINANZEN</text>
+  
+  <!-- Tagline -->
+  <text x="96" y="60" font-family="'Cormorant Garamond', serif" font-weight="600" font-size="12" letter-spacing="0.5" fill="#64748b" font-style="italic">Dein Weg. Deine Zukunft.</text>
+</svg>
