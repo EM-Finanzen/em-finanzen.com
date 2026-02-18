@@ -2349,58 +2349,7 @@
             50% { transform: scale(1.15); opacity: 0; }
         }
 
-        /* ===== BOTTOM MOBILE NAV ===== */
-        .mobile-bottom-nav {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--white);
-            border-top: 1px solid var(--light-gray);
-            z-index: 9997;
-            padding: 8px 0 max(8px, env(safe-area-inset-bottom));
-        }
-
-        .mobile-bottom-nav-inner {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .mobile-bottom-nav a {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 4px;
-            padding: 6px 12px;
-            font-size: 0.7rem;
-            color: var(--mid-gray);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .mobile-bottom-nav a.active,
-        .mobile-bottom-nav a:hover {
-            color: var(--primary);
-        }
-
-        .mobile-bottom-nav svg {
-            width: 22px;
-            height: 22px;
-            stroke: currentColor;
-        }
-
-        .mobile-bottom-nav .nav-book-btn {
-            background: var(--primary);
-            color: var(--white);
-            border-radius: 12px;
-            padding: 10px 16px;
-        }
-
-        .mobile-bottom-nav .nav-book-btn svg {
-            stroke: var(--white);
-        }
+        
 
         @media (max-width: 768px) {
             body {
@@ -2409,15 +2358,9 @@
             .hero {
                 padding-top: 110px;
             }
-            .mobile-bottom-nav {
-                display: block;
-            }
-            .contact-float {
-                bottom: 80px;
-            }
-            .cookie-banner {
-                bottom: 64px;
-            }
+            
+            .contact-float { bottom: 20px; }
+            .cookie-banner { bottom: 20px; }
             .contact-float-label {
                 display: none;
             }
@@ -3592,33 +3535,6 @@
         </button>
     </div>
 
-
-    <!-- Bottom Mobile Navigation -->
-    <div class="mobile-bottom-nav">
-        <div class="mobile-bottom-nav-inner">
-            <a href="#about" aria-label="Über mich">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                <span>Über mich</span>
-            </a>
-            <a href="#services" aria-label="Leistungen">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <span>Leistungen</span>
-            </a>
-            <a href="https://cal.eu/erik-manvajler/erstberatung" class="nav-book-btn" aria-label="Termin buchen" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                <span>Termin</span>
-            </a>
-            <a href="#finanzcheck" aria-label="Finanz-Check">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                <span>Check</span>
-            </a>
-            <a href="#contact" aria-label="Kontakt">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                <span>Kontakt</span>
-            </a>
-        </div>
-    </div>
-
     <!-- Booking Modal -->
     <div class="booking-overlay" id="bookingOverlay" onclick="closeBooking(event)">
         <div class="booking-modal" onclick="event.stopPropagation()">
@@ -4036,26 +3952,6 @@
             if (float && !float.contains(e.target)) {
                 float.classList.remove('open');
             }
-        });
-
-        // ===== MOBILE BOTTOM NAV - ACTIVE STATE =====
-        const mobileNavLinks = document.querySelectorAll('.mobile-bottom-nav a[href^="#"]');
-        const sections = document.querySelectorAll('section[id]');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 200;
-                if (window.scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
-            });
-            mobileNavLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('active');
-                }
-            });
         });
     </script>
 
