@@ -1,206 +1,127 @@
 # EM Finanzen - Projektstatus & Launch-Checkliste
-**Stand: 17.02.2026, 03:30 Uhr**
-**Domain: em-finanzen.com (Netcup, gekauft)**
-**Hosting: GitHub Pages mit SSL**
+**Stand: 18.02.2026, 02:00 Uhr**
+**Domain: em-finanzen.com (Netcup)**
+**Hosting: GitHub Pages (live)**
+**Repo: https://github.com/EM-Finanzen/em-finanzen.com**
 
 ---
 
-## FERTIGE SEITEN (14 Stück)
+## ERLEDIGT
 
-| Seite | Datei | Status |
-|-------|-------|--------|
-| Startseite | index.html | Fertig |
-| Versicherungen | versicherungen.html | Fertig |
-| Altersvorsorge | altersvorsorge.html | Fertig |
-| Vermögensaufbau | vermoegensaufbau.html | Fertig |
-| Finanzierung | finanzierung.html | Fertig |
-| Haushaltsoptimierung | haushaltsoptimierung.html | Fertig |
-| Steuervorteile | steuervorteile.html | Fertig |
-| Über Erik | ueber-erik.html | Fertig |
-| So funktioniert's | ablauf.html | Fertig |
-| Finanzrechner | rechner.html | Fertig |
-| Finanzberater Neuss | finanzberater-neuss.html | Fertig |
-| Finanzberater Düsseldorf | finanzberater-duesseldorf.html | Fertig |
-| Impressum | impressum.html | Fertig |
-| Datenschutz | datenschutz.html | Fertig |
+### Infrastruktur
+- [x] GitHub Account (EM-Finanzen) erstellt & verbunden
+- [x] GitHub Repo erstellt & Code gepusht
+- [x] GitHub Pages aktiviert mit Custom Domain
+- [x] DNS bei Netcup konfiguriert (A-Records, CNAME www)
+- [x] Domain-Inhaberverifizierung (ICANN/Netcup) abgeschlossen
+- [x] CNAME-Datei im Repo
+- [x] robots.txt + sitemap.xml erstellt
+- [x] Canonical URLs auf allen 15 Seiten
+- [x] 404-Fehlerseite erstellt
+- [x] HTTPS - SSL-Zertifikat wird von GitHub generiert (läuft automatisch)
 
----
+### Google Workspace & E-Mail
+- [x] Google Workspace eingerichtet
+- [x] Domain-Verifizierung (TXT-Record) bestätigt
+- [x] MX-Records für Google Mail konfiguriert
+- [x] SPF-Record gesetzt
+- [x] DKIM-Schlüssel (1024-bit) eingerichtet & bestätigt
+- [x] info@em-finanzen.com funktioniert
 
-## ERLEDIGTE ARBEITEN (heute)
+### Cal.com Terminbuchung
+- [x] Cal.com Account (cal.eu/erik-manvajler)
+- [x] Google Calendar verbunden (Konflikte + Events)
+- [x] Event Type "Kostenlose Erstberatung" (30 Min) erstellt
+- [x] Booking-URL auf allen 15 Seiten integriert (alle "Termin buchen" Buttons)
+
+### Website Features (alle 15 Seiten)
+- [x] Loading Screen
+- [x] Cookie Consent Banner
+- [x] Floating Contact Button (E-Mail, Telefon, WhatsApp, Termin)
+- [x] Scroll Progress Bar
+- [x] Shared Components auf allen Seiten injiziert
+- [x] Mobile Bottom Nav entfernt (verdeckte Footer)
 
 ### Brand & Design
-- [x] Komplettes Rebranding zu "EM Finanzen" (Navy/Blue/Cyan)
-- [x] Crown-SVG-Logo mit Gradient auf allen Seiten einheitlich
-- [x] Fonts: Cormorant Garamond (Display) + DM Sans (Body)
-- [x] Favicon auf allen Seiten eingebunden
-- [x] Loading-Screen mit EM Finanzen Logo
-
-### Content-Fixes
-- [x] Alle Umlaut-Fehler gefixt (ae/oe/ue -> ä/ö/ü) auf allen 14 Seiten
-- [x] "Unabhängig" -> "Eigenständig" (rechtliche Absicherung) - alle Seiten
-- [x] "Finanzielle Freiheit" -> "Finanzielle Sicherheit" - alle Seiten
-- [x] "Tönisvorst" komplett entfernt, ersetzt durch "Neuss / 27404 Zeven"
-- [x] "Empathisch"-Punkt aus About-Section entfernt
-
-### Features & Interaktivität
-- [x] Interaktiver Stepper "So funktioniert's" (klickbare Tabs, Auto-Rotation, Fortschrittsbalken)
-- [x] 3 Finanzrechner (Zinseszins, Rentenlücke, Sparplan)
-- [x] Finanz-Check Quiz (5 Fragen mit Score)
-- [x] Exit-Intent Popup (Desktop: Mouseout, Mobile: Scroll-up)
-- [x] Multi-Contact Floating Button (Telefon, WhatsApp, E-Mail)
-- [x] Bottom Mobile Navigation
-- [x] Booking Modal auf allen Seiten
-- [x] FAQ Accordions mit Schema.org FAQPage Markup
-- [x] Cookie Consent Banner
-- [x] Scroll Progress Bar
-- [x] Counter-Animationen (Stats-Bar)
-- [x] Scroll-Reveal Animationen
-
-### Technische Fixes
-- [x] Social-Proof Popups entfernt (zu spammy)
-- [x] Mobile Header-Spacing gefixt (padding-top: 110px) auf allen Seiten
-- [x] CSS-Variablen vereinheitlicht (keine Legacy --navy/--blue/--cyan mehr)
-- [x] JS-Bug gefixt (doppelte currentStep Variable)
-- [x] Stats-Bar Schriftgrößen vergrößert (3.5rem Zahlen, 1.15rem Labels)
+- [x] Rebranding zu "EM Finanzen" (Navy/Blue/Cyan)
+- [x] Crown-SVG-Logo auf allen Seiten
+- [x] Fonts lokal gehostet (Cormorant Garamond + DM Sans) - DSGVO-konform
+- [x] Favicon auf allen Seiten
+- [x] E-Mail überall auf info@em-finanzen.com aktualisiert
 
 ### SEO
-- [x] Meta Tags (title, description, keywords, OG) auf allen Seiten
-- [x] Schema.org LocalBusiness Markup (index, finanzberater-neuss, finanzberater-duesseldorf, finanzierung)
-- [x] Schema.org FAQPage auf Hauptseite
-- [x] Local SEO Seiten für Neuss und Düsseldorf
+- [x] Meta Tags auf allen Seiten
+- [x] Schema.org LocalBusiness + FAQPage Markup
+- [x] Local SEO Seiten (Neuss + Düsseldorf)
+- [x] Canonical URLs
 
 ---
 
-## VOR LAUNCH ZU ERLEDIGEN
+## OFFEN - VOR LAUNCH
 
-### KRITISCH (Muss vor Launch)
+### KRITISCH - Von Erik benötigt
 
-- [ ] **Echte Kontaktdaten einsetzen**
-  - Telefonnummer: aktuell Platzhalter "+49 123 456 7890"
-  - E-Mail: aktuell "info@em-finanzen.com" - prüfen ob korrekt
-  - Adresse im Impressum: Straße fehlt noch, nur "27404 Zeven"
-  - WhatsApp-Link: aktuell Platzhalter "https://wa.me/49XXXXXXXXXXX"
+- [ ] **Echte Telefonnummer**
+  - Aktuell Platzhalter: "+49 123 456 7890" auf allen Seiten
+  - Auch für WhatsApp-Link: "https://wa.me/49XXXXXXXXXXX"
 
-- [ ] **Impressum vervollständigen**
-  - Vollständige Adresse (Straße + Hausnummer)
+- [ ] **Vollständige Adresse für Impressum**
+  - Aktuell nur "41640 Neuss & 27404 Zeven" - Straße + Hausnummer fehlt
+
+- [ ] **Impressum-Pflichtangaben**
   - Handelsregisternummer / Gewerbeanmeldung
   - Zuständige Aufsichtsbehörde (IHK)
   - Berufsbezeichnung und Kammer
   - Vermittlerregister-Nummer (§34d/§34f GewO)
-  - USt-IdNr. falls vorhanden
+  - USt-IdNr. (falls vorhanden)
 
-- [ ] **Datenschutzerklärung prüfen**
-  - Aktuell generisch - an tatsächlich eingesetzte Tools anpassen
-  - Google Fonts: aktuell extern geladen -> entweder lokal hosten oder in DSE erwähnen
-  - Cookie-Banner: Welche Cookies werden wirklich gesetzt?
-  - Kontaktformular: Wie werden Daten verarbeitet?
+- [ ] **Social Media Profile**
+  - Instagram, LinkedIn, Facebook URLs (aktuell Platzhalter "#")
 
-- [ ] **Booking/Kontaktformular Backend**
-  - Aktuell kein Backend - Formulare senden nirgendwo hin
-  - Option 1: Formspree / Netlify Forms / Basin einrichten
-  - Option 2: Calendly-Link statt eigenem Formular
-  - Option 3: Einfacher mailto:-Link
+- [ ] **Cal.com Verfügbarkeit**
+  - Erik muss seine Arbeitszeiten in Cal.com unter "Availability" eintragen
 
-### WICHTIG (Sollte vor Launch)
+### TECHNISCH - Nächste Session
 
-- [ ] **GitHub Pages Setup**
-  - Repository erstellen (z.B. em-finanzen/em-finanzen.github.io)
-  - Alle Dateien pushen
-  - Custom Domain em-finanzen.com konfigurieren
-  - CNAME-Datei erstellen
-  - DNS bei Netcup: CNAME auf GitHub Pages zeigen
-  - SSL/HTTPS aktivieren (automatisch bei GitHub Pages)
-  - CNAME-Datei im Repo: `em-finanzen.com`
-
-- [ ] **Favicon als .ico/.png generieren**
-  - Aktuell nur favicon.svg vorhanden
-  - favicon.ico (32x32) für ältere Browser
-  - apple-touch-icon.png (180x180) für iOS
-  - favicon-192.png und favicon-512.png für PWA/Android
-
-- [ ] **Google Fonts lokal hosten** (DSGVO!)
-  - Cormorant Garamond und DM Sans herunterladen
-  - In /fonts/ Ordner ablegen
-  - @font-face Deklarationen statt Google-CDN
-  - Aktuell auf allen Seiten Google Fonts CDN -> DSGVO-Problem!
-
-- [ ] **Bilder/Assets**
-  - Erik-Profilbild: aktuell nur SVG-Platzhalter vorhanden
-  - Hero-Bild für Startseite (optional, aktuell SVG-Illustration)
-  - OG-Image für Social Sharing (1200x630px)
-
-- [ ] **robots.txt erstellen**
-  ```
-  User-agent: *
-  Allow: /
-  Sitemap: https://em-finanzen.com/sitemap.xml
-  ```
-
-- [ ] **sitemap.xml erstellen**
-  - Alle 14 Seiten auflisten
-  - Priority und Changefreq setzen
+- [ ] HTTPS aktivieren (SSL-Zertifikat prüfen, Enforce HTTPS)
+- [ ] Kontaktformular Backend (Formspree o.ä.)
+- [ ] Datenschutzerklärung an tatsächliche Tools anpassen
+- [ ] Fehlende MX-Records ergänzen (ALT1, ALT3, ALT4)
+- [ ] Google Search Console verifizieren + Sitemap einreichen
 
 ### NICE-TO-HAVE (Nach Launch)
 
 - [ ] Google Analytics / GA4 einrichten
-- [ ] Google Search Console verifizieren + Sitemap einreichen
 - [ ] Google My Business Eintrag (Neuss + Zeven)
-- [ ] 404-Fehlerseite erstellen
-- [ ] Performance-Optimierung (Bilder komprimieren, CSS/JS minifizieren)
-- [ ] Canonical URLs auf allen Seiten setzen
-- [ ] Hreflang Tags (falls mehrsprachig geplant)
-- [ ] Weitere Local-SEO-Seiten (Krefeld, Mönchengladbach, etc.)
-- [ ] Blog/Ratgeber-Bereich für SEO-Content
-- [ ] Testimonials mit echten Kundenbewertungen ersetzen
-- [ ] A/B Testing für CTA-Buttons und Hero-Texte
-- [ ] E-Mail-Marketing Setup (Newsletter)
-- [ ] Social Media Profile verlinken (aktuell Platzhalter)
+- [ ] OG-Image für Social Sharing (1200x630px)
+- [ ] Erik-Profilbild (aktuell SVG-Platzhalter)
+- [ ] Performance-Optimierung (Bilder, CSS/JS minifizieren)
+- [ ] Weitere Local-SEO-Seiten (Krefeld, Mönchengladbach)
+- [ ] Blog/Ratgeber-Bereich
+- [ ] Echte Testimonials
+- [ ] E-Mail-Marketing Setup
 
 ---
 
-## BRAND ASSETS (im Ordner vorhanden)
+## BRAND ASSETS
 
 | Datei | Beschreibung |
 |-------|-------------|
 | favicon.svg | Browser-Tab Icon |
-| em-finanzen-logo-dark.svg | Logo dunkel (für helle Hintergründe) |
-| em-finanzen-logo-light.svg | Logo hell (für dunkle Hintergründe) |
+| em-finanzen-logo-dark.svg | Logo dunkel |
+| em-finanzen-logo-light.svg | Logo hell |
 | em-finanzen-logo-horizontal.svg | Horizontales Logo |
-| em-finanzen-logo-horizontal-dark.svg | Horizontales Logo dunkel |
-| em-finanzen-mark.svg | Nur Crown-Mark |
-| em-finanzen-banner.svg | Banner-Version |
+| em-finanzen-mark.svg | Crown-Mark |
 | em-finanzen-banner-1500x500.png | Banner PNG |
-| em-finanzen-profile-dark.svg | Profilbild-Variante dunkel |
-| em-finanzen-profile-light.svg | Profilbild-Variante hell |
-| em-finanzen-profile-dark-400.png | Profilbild PNG 400px |
-| em-finanzen-profile-light-400.png | Profilbild PNG 400px |
+| em-finanzen-profile-dark-400.png | Profilbild dunkel |
+| em-finanzen-profile-light-400.png | Profilbild hell |
 
-## CSS VARIABLEN (Brand)
+## CSS VARIABLEN
 
 ```css
 --primary-dark: #0c1929
 --primary: #1e3a5f
---primary-light: #3b82f6
 --gold: #06b6d4
---gold-light: #22d3ee
---off-white: #f8fafc
---light-gray: #e2e8f0
---mid-gray: #94a3b8
---dark-gray: #475569
---black: #0f172a
 --font-display: 'Cormorant Garamond', serif
 --font-body: 'DM Sans', sans-serif
 ```
-
----
-
-## NÄCHSTE SESSION - PRIORITÄTEN
-
-1. Echte Kontaktdaten von Erik einsetzen
-2. Google Fonts lokal hosten (DSGVO-kritisch!)
-3. Impressum vervollständigen (Pflichtangaben)
-4. Formular-Backend einrichten (Formspree o.ä.)
-5. GitHub Pages deployen + Domain verbinden
-6. Favicon-Varianten generieren
-7. robots.txt + sitemap.xml
-8. Final-Check auf allen Seiten
