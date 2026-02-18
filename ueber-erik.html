@@ -2304,22 +2304,25 @@
         <button onclick="closeBookingModal()" style="position:absolute;top:1.25rem;right:1.25rem;background:none;border:none;font-size:1.8rem;cursor:pointer;color:#94a3b8;line-height:1;">&times;</button>
         <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:#0c1929;margin-bottom:0.5rem;">Termin vereinbaren</h2>
         <p style="font-size:0.95rem;color:#475569;margin-bottom:1.5rem;">Kostenloses Erstgespräch. Ich melde mich innerhalb von 24 Stunden bei dir.</p>
-        <form onsubmit="handleBookingSubmit(event)">
+        <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="18860f30-fe01-45e9-b4d3-debe82ad321d">
+            <input type="hidden" name="subject" value="Terminanfrage - EM Finanzen (Über Erik)">
+            <input type="hidden" name="from_name" value="EM Finanzen Website">
             <div style="margin-bottom:1rem;">
                 <label style="display:block;margin-bottom:0.4rem;font-weight:600;font-size:0.9rem;color:#0c1929;">Name *</label>
-                <input type="text" placeholder="Dein Name" required style="width:100%;padding:0.75rem;border:2px solid #e2e8f0;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:1rem;">
+                <input type="text" name="name" placeholder="Dein Name" required style="width:100%;padding:0.75rem;border:2px solid #e2e8f0;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:1rem;">
             </div>
             <div style="margin-bottom:1rem;">
                 <label style="display:block;margin-bottom:0.4rem;font-weight:600;font-size:0.9rem;color:#0c1929;">E-Mail *</label>
-                <input type="email" placeholder="deine@email.de" required style="width:100%;padding:0.75rem;border:2px solid #e2e8f0;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:1rem;">
+                <input type="email" name="email" placeholder="deine@email.de" required style="width:100%;padding:0.75rem;border:2px solid #e2e8f0;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:1rem;">
             </div>
             <div style="margin-bottom:1rem;">
                 <label style="display:block;margin-bottom:0.4rem;font-weight:600;font-size:0.9rem;color:#0c1929;">Telefon *</label>
-                <input type="tel" placeholder="+49 ..." required style="width:100%;padding:0.75rem;border:2px solid #e2e8f0;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:1rem;">
+                <input type="tel" name="phone" placeholder="+49 ..." required style="width:100%;padding:0.75rem;border:2px solid #e2e8f0;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:1rem;">
             </div>
             <div style="margin-bottom:1.5rem;">
                 <label style="display:block;margin-bottom:0.4rem;font-weight:600;font-size:0.9rem;color:#0c1929;">Nachricht (optional)</label>
-                <textarea placeholder="Worum geht es?" rows="3" style="width:100%;padding:0.75rem;border:2px solid #e2e8f0;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:1rem;resize:vertical;"></textarea>
+                <textarea name="message" placeholder="Worum geht es?" rows="3" style="width:100%;padding:0.75rem;border:2px solid #e2e8f0;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:1rem;resize:vertical;"></textarea>
             </div>
             <button type="submit" style="width:100%;background:linear-gradient(135deg,var(--gold),var(--primary-light));color:#fff;padding:1rem;border:none;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;">Termin anfragen</button>
         </form>
@@ -2376,11 +2379,24 @@
         document.getElementById('bookingModal').style.display = 'none';
     }
 
-    function handleBookingSubmit(e) {
+    document.getElementById('bookingForm').addEventListener('submit', async function(e) {
         e.preventDefault();
-        alert('Vielen Dank! Ich melde mich innerhalb von 24 Stunden bei dir.');
-        closeBookingModal();
-    }
+        const btn = this.querySelector('button[type="submit"]');
+        const orig = btn.innerHTML;
+        btn.innerHTML = 'Wird gesendet...'; btn.disabled = true;
+        try {
+            const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(this) });
+            const data = await res.json();
+            if (data.success) {
+                btn.innerHTML = 'Gesendet!'; btn.style.background = '#10b981';
+                this.reset();
+                setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; btn.style.background = ''; closeBookingModal(); }, 2000);
+            } else { throw new Error(); }
+        } catch(err) {
+            btn.innerHTML = 'Fehler - erneut versuchen'; btn.style.background = '#ef4444';
+            setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; btn.style.background = ''; }, 3000);
+        }
+    });
 
     window.addEventListener('click', function(event) {
         const modal = document.getElementById('bookingModal');

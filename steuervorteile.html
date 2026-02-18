@@ -1727,7 +1727,10 @@
                 </div>
             </div>
 
-            <form id="bookingForm">
+            <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="18860f30-fe01-45e9-b4d3-debe82ad321d">
+                <input type="hidden" name="subject" value="Terminanfrage Steuervorteile - EM Finanzen">
+                <input type="hidden" name="from_name" value="EM Finanzen Website">
                 <input type="hidden" id="bookingType" name="bookingType" value="">
 
                 <div class="form-group">
@@ -1816,10 +1819,23 @@
             if (e.target.id === 'bookingModal') closeModal();
         });
 
-        document.getElementById('bookingForm').addEventListener('submit', (e) => {
+        document.getElementById('bookingForm').addEventListener('submit', async function(e) {
             e.preventDefault();
-            alert('Vielen Dank! Ich melde mich innerhalb von 24 Stunden bei Ihnen.');
-            closeModal();
+            const btn = this.querySelector('button[type="submit"]');
+            const orig = btn.innerHTML;
+            btn.innerHTML = 'Wird gesendet...'; btn.disabled = true;
+            try {
+                const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(this) });
+                const data = await res.json();
+                if (data.success) {
+                    btn.innerHTML = 'Gesendet!'; btn.style.background = '#10b981';
+                    this.reset();
+                    setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; btn.style.background = ''; closeModal(); }, 2000);
+                } else { throw new Error(); }
+            } catch(err) {
+                btn.innerHTML = 'Fehler - erneut versuchen'; btn.style.background = '#ef4444';
+                setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; btn.style.background = ''; }, 3000);
+            }
         });
     
         // ===== LOADING SCREEN =====

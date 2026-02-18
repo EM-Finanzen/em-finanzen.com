@@ -3377,7 +3377,10 @@
                 </div>
                 
                 <div class="contact-form">
-                    <form id="contactForm" action="#" method="POST" novalidate>
+                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="18860f30-fe01-45e9-b4d3-debe82ad321d">
+                        <input type="hidden" name="subject" value="Neue Kontaktanfrage - EM Finanzen">
+                        <input type="hidden" name="from_name" value="EM Finanzen Website">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Name *</label>
@@ -3671,11 +3674,27 @@
             });
         });
 
-        // Contact form handling
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        // Contact form handling (Web3Forms AJAX)
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();
-            alert('Vielen Dank für Ihre Nachricht! Ich melde mich schnellstmöglich bei Ihnen.');
-            this.reset();
+            const btn = this.querySelector('button[type="submit"]');
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = 'Wird gesendet...';
+            btn.disabled = true;
+            try {
+                const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(this) });
+                const data = await res.json();
+                if (data.success) {
+                    btn.innerHTML = 'Gesendet!';
+                    btn.style.background = '#10b981';
+                    this.reset();
+                    setTimeout(() => { btn.innerHTML = originalHTML; btn.disabled = false; btn.style.background = ''; }, 3000);
+                } else { throw new Error(); }
+            } catch(err) {
+                btn.innerHTML = 'Fehler - erneut versuchen';
+                btn.style.background = '#ef4444';
+                setTimeout(() => { btn.innerHTML = originalHTML; btn.disabled = false; btn.style.background = ''; }, 3000);
+            }
         });
 
         // ===== BOOKING MODAL =====

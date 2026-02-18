@@ -1431,22 +1431,25 @@
         <div class="modal-content">
             <button class="modal-close" onclick="closeBookingModal()">&times;</button>
             <h2>Termin buchen</h2>
-            <form onsubmit="handleBookingSubmit(event)">
+            <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="18860f30-fe01-45e9-b4d3-debe82ad321d">
+                <input type="hidden" name="subject" value="Terminanfrage - EM Finanzen (Ablauf)">
+                <input type="hidden" name="from_name" value="EM Finanzen Website">
                 <div class="form-group">
                     <label for="b-name">Name *</label>
-                    <input type="text" id="b-name" required>
+                    <input type="text" id="b-name" name="name" required>
                 </div>
                 <div class="form-group">
                     <label for="b-email">E-Mail *</label>
-                    <input type="email" id="b-email" required>
+                    <input type="email" id="b-email" name="email" required>
                 </div>
                 <div class="form-group">
                     <label for="b-phone">Telefon *</label>
-                    <input type="tel" id="b-phone" required>
+                    <input type="tel" id="b-phone" name="phone" required>
                 </div>
                 <div class="form-group">
                     <label for="b-preference">Bevorzugte Kontaktzeit</label>
-                    <select id="b-preference">
+                    <select id="b-preference" name="kontaktzeit">
                         <option>Vormittag (9-12 Uhr)</option>
                         <option>Nachmittag (12-17 Uhr)</option>
                         <option>Abend (17-20 Uhr)</option>
@@ -1454,7 +1457,7 @@
                 </div>
                 <div class="form-group">
                     <label for="b-message">Nachricht (optional)</label>
-                    <textarea id="b-message" rows="4" placeholder="Worum geht es? Was sind Ihre wichtigsten Fragen?"></textarea>
+                    <textarea id="b-message" name="message" rows="4" placeholder="Worum geht es? Was sind Ihre wichtigsten Fragen?"></textarea>
                 </div>
                 <button type="submit" class="submit-button">Termin anfragen</button>
             </form>
@@ -1493,11 +1496,24 @@
             document.getElementById('bookingModal').classList.remove('active');
         }
 
-        function handleBookingSubmit(e) {
+        document.getElementById('bookingForm').addEventListener('submit', async function(e) {
             e.preventDefault();
-            alert('Vielen Dank! Ich melde mich innerhalb von 24 Stunden bei dir.');
-            closeBookingModal();
-        }
+            const btn = this.querySelector('button[type="submit"]');
+            const orig = btn.innerHTML;
+            btn.innerHTML = 'Wird gesendet...'; btn.disabled = true;
+            try {
+                const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(this) });
+                const data = await res.json();
+                if (data.success) {
+                    btn.innerHTML = 'Gesendet!'; btn.style.background = '#10b981';
+                    this.reset();
+                    setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; btn.style.background = ''; closeBookingModal(); }, 2000);
+                } else { throw new Error(); }
+            } catch(err) {
+                btn.innerHTML = 'Fehler - erneut versuchen'; btn.style.background = '#ef4444';
+                setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; btn.style.background = ''; }, 3000);
+            }
+        });
 
         window.addEventListener('click', function(event) {
             const modal = document.getElementById('bookingModal');
