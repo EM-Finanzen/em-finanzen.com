@@ -2548,7 +2548,7 @@
                 <a href="#finanzcheck">Finanz-Check</a>
                 <a href="#testimonials">Kundenstimmen</a>
                 <a href="#faq">FAQ</a>
-                <a href="#" class="nav-cta" onclick="openBooking(event)">Termin buchen</a>
+                <a href="https://cal.eu/erik-manvajler/erstberatung" class="nav-cta" target="_blank" rel="noopener">Termin buchen</a>
             </nav>
             
             <button class="mobile-toggle" onclick="toggleNav()" aria-label="Menü öffnen" aria-expanded="false" id="mobileToggle">
@@ -2568,7 +2568,7 @@
                     <h1>Mehr <span>Geld</span>, mehr <span>Zeit</span>, mehr <span>Sicherheit</span></h1>
                     <p class="hero-text">Ich helfe Ihnen, Ihre Finanzen zu optimieren und bis zu 10% Ihres Nettoeinkommens jährlich zu sparen – für die Dinge, die Ihnen wirklich wichtig sind.</p>
                     <div class="hero-cta">
-                        <a href="#" class="btn btn-primary" onclick="openBooking(event)">
+                        <a href="https://cal.eu/erik-manvajler/erstberatung" target="_blank" rel="noopener" class="btn btn-primary">
                             Kostenloses Erstgespräch
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -3258,7 +3258,7 @@
                     </div>
                     <h3 id="quizResultTitle">Ihr Ergebnis</h3>
                     <p id="quizResultText">Ergebnis wird berechnet...</p>
-                    <a href="#" class="btn btn-primary" onclick="openBooking(event)" style="background:var(--gold);color:var(--primary-dark);">
+                    <a href="https://cal.eu/erik-manvajler/erstberatung" target="_blank" rel="noopener" class="btn btn-primary" style="background:var(--gold);color:var(--primary-dark);">
                         Kostenloses Beratungsgespräch buchen
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -3369,7 +3369,7 @@
                     <h2>Bereit für mehr finanzielle Sicherheit?</h2>
                     <p>Vereinbaren Sie jetzt Ihr kostenloses und unverbindliches Erstgespräch. Ich freue mich darauf, Sie kennenzulernen!</p>
                     <div class="cta-buttons">
-                        <a href="#" class="btn btn-primary" onclick="openBooking(event)">
+                        <a href="https://cal.eu/erik-manvajler/erstberatung" target="_blank" rel="noopener" class="btn btn-primary">
                             Termin buchen
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -3576,7 +3576,7 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 </div>
             </a>
-            <a href="#" class="contact-float-option" onclick="openBooking(event);document.getElementById('contactFloat').classList.remove('open');">
+            <a href="https://cal.eu/erik-manvajler/erstberatung" class="contact-float-option" target="_blank" rel="noopener">
                 <span class="contact-float-label">Termin buchen</span>
                 <div class="contact-float-icon cal">
                     <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -3601,7 +3601,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 <span>Leistungen</span>
             </a>
-            <a href="#" onclick="openBooking(event)" class="nav-book-btn" aria-label="Termin buchen">
+            <a href="https://cal.eu/erik-manvajler/erstberatung" class="nav-book-btn" aria-label="Termin buchen" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 <span>Termin</span>
             </a>
@@ -3700,7 +3700,7 @@
                         <p>In 30 Min. analysiere ich Ihre Finanzen und zeige Ihnen Sparpotenziale - kostenlos & unverbindlich.</p>
                     </div>
                 </div>
-                <a href="#" class="btn btn-primary" onclick="openBooking(event);closeExitPopup();">
+                <a href="https://cal.eu/erik-manvajler/erstberatung" target="_blank" rel="noopener" onclick="closeExitPopup();" class="btn btn-primary">
                     Ja, kostenloses Gespräch buchen
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
@@ -3764,9 +3764,7 @@
 
         // ===== BOOKING MODAL =====
         function openBooking(e) {
-            if (e) e.preventDefault();
-            document.getElementById('bookingOverlay').classList.add('active');
-            document.body.style.overflow = 'hidden';
+            window.open('https://cal.eu/erik-manvajler/erstberatung', '_blank');
         }
 
         function closeBooking(e) {

@@ -1308,7 +1308,7 @@
             <a href="index.html#finanzcheck">Finanz-Check</a>
             <a href="index.html#testimonials">Kundenstimmen</a>
             <a href="index.html#faq">FAQ</a>
-            <a href="index.html" class="nav-cta" onclick="openBooking(event)">Termin buchen</a>
+            <a href="https://cal.eu/erik-manvajler/erstberatung" class="nav-cta" target="_blank" rel="noopener">Termin buchen</a>
         </nav>
         <div class="mobile-toggle" onclick="toggleNav()">
             <span></span><span></span><span></span>
@@ -1339,7 +1339,7 @@
                 <h1>Ihr optimaler <span>Versicherungsschutz</span> - eigenständig beraten</h1>
                 <p class="hero-text">Zu viel bezahlt, zu wenig versichert - das betrifft die meisten Deutschen. Als eigenständiger Finanzberater vergleiche ich für Sie über 310 Anbieter und finde den optimalen Schutz zum besten Preis. Persönlich, transparent und ohne versteckte Provisionen.</p>
                 <div class="hero-cta">
-                    <a href="#" onclick="openBooking(event)" class="btn btn-gold">
+                    <a href="https://cal.eu/erik-manvajler/erstberatung" target="_blank" rel="noopener" class="btn btn-gold">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                         Kostenlose Beratung buchen
                     </a>
@@ -1435,7 +1435,7 @@
                             Vollständig kostenlos & unverbindlich
                         </div>
                     </div>
-                    <a href="#" onclick="openBooking(event)" class="btn btn-gold" style="margin-top:28px;width:100%;justify-content:center;">Jetzt Termin buchen</a>
+                    <a href="https://cal.eu/erik-manvajler/erstberatung" target="_blank" rel="noopener" class="btn btn-gold" style="margin-top:28px;width:100%;justify-content:center;">Jetzt Termin buchen</a>
                 </div>
                 <div class="why-card-float why-card-float-1">
                     <div class="float-icon" style="background:linear-gradient(135deg,rgba(6,182,212,0.15),rgba(59,130,246,0.15));">
@@ -1825,7 +1825,7 @@
                 <h2>Starten Sie jetzt mit Ihrem kostenlosen Versicherungs-Check</h2>
                 <p>In 60 Minuten erfahren Sie, wo Sie zu viel zahlen und wo Sie Schutzlücken haben - vollständig kostenlos und unverbindlich.</p>
                 <div class="cta-buttons">
-                    <a href="#" onclick="openBooking(event)" class="btn btn-gold">
+                    <a href="https://cal.eu/erik-manvajler/erstberatung" target="_blank" rel="noopener" class="btn btn-gold">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                         Termin kostenlos buchen
                     </a>
@@ -1952,10 +1952,8 @@
     }
 
     function openBooking(e) {
-        if (e) e.preventDefault();
-        const modal = document.getElementById('bookingModal');
-        if (modal) modal.classList.add('active');
-    }
+            window.open('https://cal.eu/erik-manvajler/erstberatung', '_blank');
+        }
 
     function closeBooking() {
         const modal = document.getElementById('bookingModal');
@@ -2031,7 +2029,7 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 </div>
             </a>
-            <a href="index.html#contact" class="contact-float-option" onclick="if(typeof openBooking==='function'){openBooking(event);document.getElementById('contactFloat').classList.remove('open');}">
+            <a href="https://cal.eu/erik-manvajler/erstberatung" class="contact-float-option" target="_blank" rel="noopener">
                 <span class="contact-float-label">Termin buchen</span>
                 <div class="contact-float-icon cal">
                     <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -2054,7 +2052,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 <span>Leistungen</span>
             </a>
-            <a href="index.html#contact" class="nav-book-btn" aria-label="Termin buchen" onclick="if(typeof openBooking==='function'){openBooking(event);}">
+            <a href="https://cal.eu/erik-manvajler/erstberatung" class="nav-book-btn" aria-label="Termin buchen" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 <span>Termin</span>
             </a>
