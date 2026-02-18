@@ -2,6 +2,19 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <!-- Google Analytics (only with consent) -->
+    <script>
+    if (localStorage.getItem('cookieConsent') === 'accepted') {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-3X9XSVBPB1';
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3X9XSVBPB1');
+    }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Kostenlose Finanzrechner von EM Finanzen: Zinseszinsrechner, Rentenlückenrechner und Sparplan-Rechner. Berechnen Sie Ihr Vermögenswachstum und Ihre Altersvorsorge.">
     <meta name="keywords" content="Zinseszinsrechner, Rentenlückenrechner, Sparplan Rechner, Finanzrechner, Altersvorsorge berechnen, Vermögensaufbau Rechner, EM Finanzen">
@@ -1824,6 +1837,15 @@
         function acceptCookies() {
             localStorage.setItem('cookieConsent', 'accepted');
             document.getElementById('cookieBanner').classList.remove('show');
+            // Load GA4 after consent
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-3X9XSVBPB1';
+            document.head.appendChild(s);
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-3X9XSVBPB1');
         }
         function declineCookies() {
             localStorage.setItem('cookieConsent', 'declined');
