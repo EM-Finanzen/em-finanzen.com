@@ -1,5 +1,5 @@
 # EM Finanzen - Projektstatus & Launch-Checkliste
-**Stand: 18.02.2026, 02:00 Uhr**
+**Stand: 19.02.2026, 02:30 Uhr**
 **Domain: em-finanzen.com (Netcup)**
 **Hosting: GitHub Pages (live)**
 **Repo: https://github.com/EM-Finanzen/em-finanzen.com**
@@ -15,10 +15,11 @@
 - [x] DNS bei Netcup konfiguriert (A-Records, CNAME www)
 - [x] Domain-Inhaberverifizierung (ICANN/Netcup) abgeschlossen
 - [x] CNAME-Datei im Repo
-- [x] robots.txt + sitemap.xml erstellt
-- [x] Canonical URLs auf allen 15 Seiten
+- [x] robots.txt + sitemap.xml erstellt (inkl. alle 20 Seiten)
+- [x] Canonical URLs auf allen Seiten
 - [x] 404-Fehlerseite erstellt
-- [x] HTTPS - SSL-Zertifikat wird von GitHub generiert (läuft automatisch)
+- [x] HTTPS - SSL-Zertifikat von GitHub (automatisch)
+- [x] Danke-Seite (danke.html) mit Formular-Weiterleitung
 
 ### Google Workspace & E-Mail
 - [x] Google Workspace eingerichtet
@@ -29,92 +30,124 @@
 - [x] info@em-finanzen.com funktioniert
 
 ### Cal.com Terminbuchung
-- [x] Cal.com Account (cal.eu/erik-manvajler)
-- [x] Google Calendar verbunden (Konflikte + Events)
-- [x] Event Type "Kostenlose Erstberatung" (30 Min) erstellt
-- [x] Booking-URL auf allen 15 Seiten integriert (alle "Termin buchen" Buttons)
+- [x] Cal.com Account (cal.eu/erik-manvajler/erstberatung)
+- [x] Google Calendar verbunden
+- [x] Booking-URL auf allen Seiten integriert (alle "Termin buchen" Buttons)
+- [x] Booking-Modals korrigiert (cal.eu statt cal.com)
 
-### Website Features (alle 15 Seiten)
+### Website Features (alle 20 Seiten)
 - [x] Loading Screen
-- [x] Cookie Consent Banner
-- [x] Floating Contact Button (E-Mail, Telefon, WhatsApp, Termin)
+- [x] Cookie Consent Banner (DSGVO-konform)
+- [x] Floating Contact Button (WhatsApp, Telefon, E-Mail, Termin)
 - [x] Scroll Progress Bar
-- [x] Shared Components auf allen Seiten injiziert
-- [x] Mobile Bottom Nav entfernt (verdeckte Footer)
+- [x] Kontaktformulare via Web3Forms (7 Formulare, alle mit Weiterleitung zu danke.html)
+- [x] GA4 Tracking (G-3X9XSVBPB1) mit Cookie-Consent
 
 ### Brand & Design
 - [x] Rebranding zu "EM Finanzen" (Navy/Blue/Cyan)
 - [x] Crown-SVG-Logo auf allen Seiten
 - [x] Fonts lokal gehostet (Cormorant Garamond + DM Sans) - DSGVO-konform
 - [x] Favicon auf allen Seiten
-- [x] E-Mail überall auf info@em-finanzen.com aktualisiert
+- [x] Icons korrigiert (Euro statt Dollar, Uhr statt Smiley, Schild-Icons)
+- [x] OG-Image für Social Sharing
 
-### SEO
+### SEO & Schema
 - [x] Meta Tags auf allen Seiten
-- [x] Schema.org LocalBusiness + FAQPage Markup
-- [x] Local SEO Seiten (Neuss + Düsseldorf)
-- [x] Canonical URLs
+- [x] Schema.org LocalBusiness + FAQPage + FinancialService Markup
+- [x] Local SEO Seiten: Neuss, Düsseldorf, Krefeld, Dormagen, Kaarst, Meerbusch, Mönchengladbach, Ratingen, Zeven (9 Städte)
+- [x] Sitemap mit allen 20 Seiten
+- [x] Social Media Links (Instagram + Facebook) auf allen Seiten
+
+### Responsive / Mobile
+- [x] responsive.css nach inline Styles geladen (CSS-Cascade korrigiert)
+- [x] Burger-Menü CTA Fix (opaque Background)
+- [x] Comparison Table mobile Overflow gefixt
+- [x] Why-Grid mobile Layout gefixt
+- [x] Timeline-Dots Overlap auf Mobile gefixt (3 Seiten)
+- [x] Balkendiagramm-Visualisierung (Vermögensaufbau) mobile gefixt
+- [x] Tabellen-Layout (Steuervorteile) mobile Stacking
+
+### Content & Messaging (19.02.2026)
+- [x] "Versicherungs-Check" → "Persönliche Finanzanalyse" (alle Seiten)
+- [x] Kosten-Messaging: nur Erstgespräch kostenlos, Analyse nicht erwähnen
+- [x] Neuss als Hauptstandort (statt Zeven), Zeven sekundär
+- [x] Finanzierung-Seite komplett entfernt (inkl. alle Verlinkungen)
+- [x] Bewertungs-Stat aus Hero entfernt
+- [x] "Wirtschaftlicher Vorteil" statt "Ersparnis pro Jahr"
+- [x] Footer auf allen Seiten vereinheitlicht (Standard 4-Spalten-Layout)
+
+### Rechtliches (19.02.2026)
+- [x] Datenschutzerklärung aktualisiert: GA4, WhatsApp, Instagram, Facebook korrekt deklariert
+- [x] Placeholder-Warnung aus Datenschutz entfernt
 
 ---
 
-## OFFEN - VOR LAUNCH
+## OFFEN
 
-### KRITISCH - Von Erik benötigt
-
-- [ ] **Echte Telefonnummer**
-  - Aktuell Platzhalter: "+49 123 456 7890" auf allen Seiten
-  - Auch für WhatsApp-Link: "https://wa.me/49XXXXXXXXXXX"
-
-- [ ] **Vollständige Adresse für Impressum**
-  - Aktuell nur "41640 Neuss & 27404 Zeven" - Straße + Hausnummer fehlt
-
-- [ ] **Impressum-Pflichtangaben**
-  - Handelsregisternummer / Gewerbeanmeldung
-  - Zuständige Aufsichtsbehörde (IHK)
-  - Berufsbezeichnung und Kammer
+### Von Erik benötigt
+- [ ] **Profilfoto** für ueber-erik.html (aktuell SVG-Platzhalter)
+- [ ] **Impressum-Pflichtangaben prüfen**
   - Vermittlerregister-Nummer (§34d/§34f GewO)
   - USt-IdNr. (falls vorhanden)
+  - Zuständige IHK / Aufsichtsbehörde
+- [ ] **Cal.com Verfügbarkeit** - Arbeitszeiten in Cal.com eintragen
+- [ ] **Google My Business** Eintrag erstellen (Neuss + Zeven)
 
-- [ ] **Social Media Profile**
-  - Instagram, LinkedIn, Facebook URLs (aktuell Platzhalter "#")
-
-- [ ] **Cal.com Verfügbarkeit**
-  - Erik muss seine Arbeitszeiten in Cal.com unter "Availability" eintragen
-
-### TECHNISCH - Nächste Session
-
-- [ ] HTTPS aktivieren (SSL-Zertifikat prüfen, Enforce HTTPS)
-- [ ] Kontaktformular Backend (Formspree o.ä.)
-- [ ] Datenschutzerklärung an tatsächliche Tools anpassen
-- [ ] Fehlende MX-Records ergänzen (ALT1, ALT3, ALT4)
+### Technisch
 - [ ] Google Search Console verifizieren + Sitemap einreichen
+- [ ] Impressum `noindex` entfernen (sollte indexierbar sein)
+- [ ] Navigation vereinheitlichen (unterschiedliche Nav-Strukturen pro Seite)
 
-### NICE-TO-HAVE (Nach Launch)
-
-- [ ] Google Analytics / GA4 einrichten
-- [ ] Google My Business Eintrag (Neuss + Zeven)
-- [ ] OG-Image für Social Sharing (1200x630px)
-- [ ] Erik-Profilbild (aktuell SVG-Platzhalter)
-- [ ] Performance-Optimierung (Bilder, CSS/JS minifizieren)
-- [ ] Weitere Local-SEO-Seiten (Krefeld, Mönchengladbach)
+### Nice-to-Have (Nach Launch)
 - [ ] Blog/Ratgeber-Bereich
-- [ ] Echte Testimonials
+- [ ] Echte Testimonials / Kundenbewertungen einbauen
 - [ ] E-Mail-Marketing Setup
+- [ ] Weitere Local-SEO-Seiten bei Bedarf
+- [ ] Performance-Audit (Lighthouse Score optimieren)
 
 ---
 
-## BRAND ASSETS
+## SEITENÜBERSICHT (20 Seiten)
 
-| Datei | Beschreibung |
-|-------|-------------|
-| favicon.svg | Browser-Tab Icon |
-| em-finanzen-logo-dark.svg | Logo dunkel |
-| em-finanzen-logo-light.svg | Logo hell |
-| em-finanzen-logo-horizontal.svg | Horizontales Logo |
-| em-finanzen-mark.svg | Crown-Mark |
-| em-finanzen-banner-1500x500.png | Banner PNG |
-| em-finanzen-profile-dark-400.png | Profilbild dunkel |
-| em-finanzen-profile-light-400.png | Profilbild hell |
+| Seite | Status | Beschreibung |
+|-------|--------|-------------|
+| index.html | Live | Hauptseite mit Services, Quiz, Testimonials, FAQ |
+| versicherungen.html | Live | Versicherungsberatung |
+| altersvorsorge.html | Live | Altersvorsorge & Rente |
+| vermoegensaufbau.html | Live | Vermögensaufbau & Investment |
+| steuervorteile.html | Live | Steuervorteile nutzen |
+| haushaltsoptimierung.html | Live | Haushaltsoptimierung |
+| ablauf.html | Live | So funktioniert's |
+| rechner.html | Live | Finanzrechner |
+| ueber-erik.html | Live | Über Erik Manvajler |
+| danke.html | Live | Danke-Seite (noindex) |
+| datenschutz.html | Live | Datenschutzerklärung |
+| impressum.html | Live | Impressum |
+| 404.html | Live | Fehlerseite |
+| finanzberater-neuss.html | Live | Local SEO Neuss |
+| finanzberater-duesseldorf.html | Live | Local SEO Düsseldorf |
+| finanzberater-krefeld.html | Live | Local SEO Krefeld |
+| finanzberater-dormagen.html | Live | Local SEO Dormagen |
+| finanzberater-kaarst.html | Live | Local SEO Kaarst |
+| finanzberater-meerbusch.html | Live | Local SEO Meerbusch |
+| finanzberater-moenchengladbach.html | Live | Local SEO Mönchengladbach |
+| finanzberater-ratingen.html | Live | Local SEO Ratingen |
+| finanzberater-zeven.html | Live | Local SEO Zeven |
+| ~~finanzierung.html~~ | Entfernt | Wurde am 19.02. entfernt |
+
+## TECH STACK
+
+| Tool | Zweck |
+|------|-------|
+| GitHub Pages | Hosting |
+| Netcup | Domain (em-finanzen.com) |
+| Web3Forms | Kontaktformulare (Key: 18860f30...) |
+| Cal.eu | Terminbuchung |
+| GA4 | Analytics (G-3X9XSVBPB1) |
+| Google Workspace | E-Mail (info@em-finanzen.com) |
+| Instagram | @em_finanzen |
+| Facebook | EM Finanzen Seite |
+| WhatsApp | +49 163 7193317 |
 
 ## CSS VARIABLEN
 
