@@ -75,6 +75,8 @@
         '<div class="nav-dropdown-menu" role="menu">' + dropdownItems + '</div>' +
       '</div>' +
       '<a href="ueber-erik.html" class="nav-link' + aboutActive + '">\u00dcber Erik</a>' +
+      '<a href="rechner.html" class="nav-link' + (path === 'rechner.html' ? ' active' : '') + '">Finanzrechner</a>' +
+      '<a href="' + (path === 'index.html' ? '#faq' : 'index.html#faq') + '" class="nav-link">FAQ</a>' +
       '<a href="https://cal.eu/erik-manvajler/erstberatung" class="nav-cta" target="_blank" rel="noopener">Termin buchen</a>' +
     '</nav>' +
 
