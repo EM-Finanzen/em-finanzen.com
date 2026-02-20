@@ -28,6 +28,7 @@ gtag('js',new Date());gtag('config','G-3X9XSVBPB1');}</script>
       <link rel="preload" href="fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/cormorant-garamond-700-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link href="fonts/fonts.css" rel="stylesheet">
+  <link href="nav.css" rel="stylesheet">
 
   <script type="application/ld+json">
 {
@@ -109,36 +110,7 @@ gtag('js',new Date());gtag('config','G-3X9XSVBPB1');}</script>
 
 <div class="scroll-progress" id="scrollProgress"></div>
 
-<header id="header">
-  <div class="header-inner">
-    <a href="index.html" class="logo">
-      <div class="logo-icon" style="display:flex;flex-direction:column;align-items:center;width:48px;">
-        <svg width="32" height="16" viewBox="0 0 60 30" fill="none">
-          <defs><linearGradient id="hCrown" x1="12" y1="14" x2="48" y2="14" gradientUnits="userSpaceOnUse"><stop stop-color="#06b6d4"/><stop offset=".5" stop-color="#3b82f6"/><stop offset="1" stop-color="#1e40af"/></linearGradient></defs>
-          <path d="M12 26 L20 10 L26 18 L30 4 L34 18 L40 10 L48 26" stroke="url(#hCrown)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          <circle cx="20" cy="9" r="2.5" fill="#3b82f6"/><circle cx="30" cy="3" r="3" fill="#1e40af"/><circle cx="40" cy="9" r="2.5" fill="#3b82f6"/>
-        </svg>
-        <span style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:24px;letter-spacing:0.08em;color:#1e3a5f;line-height:1;margin-top:-2px;">EM</span>
-        <div style="width:30px;height:2px;background:linear-gradient(90deg,#06b6d4,#3b82f6,#1e40af);border-radius:1px;margin-top:1px;"></div>
-      </div>
-      <div style="display:flex;flex-direction:column;">
-        <div class="logo-text" style="color:#1e3a5f;">EM Finanzen</div>
-        <div class="logo-tagline" style="font-family:'Cormorant Garamond',serif;font-style:italic;letter-spacing:0.02em;">Dein Weg. Deine Zukunft.</div>
-      </div>
-    </a>
-    <nav id="nav">
-      <a href="index.html#about">Über mich</a>
-      <a href="index.html#services">Leistungen</a>
-      <a href="index.html#finanzcheck">Finanz-Check</a>
-      <a href="index.html#testimonials">Kundenstimmen</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="https://cal.eu/erik-manvajler/erstberatung" class="nav-cta" target="_blank" rel="noopener">Termin buchen</a>
-    </nav>
-    <div class="mobile-toggle" onclick="toggleNav()">
-      <span></span><span></span><span></span>
-    </div>
-  </div>
-</header>
+<header id="header"></header>
 
 <div class="breadcrumb">
   <div class="container">
@@ -713,7 +685,7 @@ gtag('js',new Date());gtag('config','G-3X9XSVBPB1');}</script>
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18,15 12,9 6,15"/></svg>
 </button>
 
-<script>window.addEventListener('scroll',()=>{const el=document.getElementById('scrollProgress');const st=window.scrollY||document.documentElement.scrollTop;const h=document.documentElement.scrollHeight-document.documentElement.clientHeight;if(el)el.style.width=(h>0?(st/h*100):0)+'%';const header=document.getElementById('header');if(header)header.classList.toggle('scrolled',window.scrollY>50);const top=document.getElementById('scrollTop');if(top)top.classList.toggle('visible',window.scrollY>400);});function toggleNav(){document.getElementById('nav').classList.toggle('open');}
+<script>window.addEventListener('scroll',()=>{const el=document.getElementById('scrollProgress');const st=window.scrollY||document.documentElement.scrollTop;const h=document.documentElement.scrollHeight-document.documentElement.clientHeight;if(el)el.style.width=(h>0?(st/h*100):0)+'%';const header=document.getElementById('header');if(header)header.classList.toggle('scrolled',window.scrollY>50);const top=document.getElementById('scrollTop');if(top)top.classList.toggle('visible',window.scrollY>400);});
 function openBooking(e){window.open('https://cal.eu/erik-manvajler/erstberatung','_blank');}
 function closeBooking(){const modal=document.getElementById('bookingModal');if(modal)modal.classList.remove('active');}
 function toggleFaq(el){const item=el.closest('.faq-item');const wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open');}
@@ -762,5 +734,6 @@ document.addEventListener('click',function(e){const float=document.getElementByI
     </button>
   </div>
 
+  <script src="nav.js"></script>
 </body>
 </html>

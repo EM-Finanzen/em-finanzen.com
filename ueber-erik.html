@@ -28,6 +28,7 @@ gtag('js',new Date());gtag('config','G-3X9XSVBPB1');}</script>
       <link rel="preload" href="fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/cormorant-garamond-700-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link href="fonts/fonts.css" rel="stylesheet">
+    <link href="nav.css" rel="stylesheet">
 
   <!-- Schema: Person + FinancialService -->
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Erik Manvajler","jobTitle":"Finanzberater & Versicherungsvertreter","url":"https://em-finanzen.com/ueber-erik.html","worksFor":{"@type":"FinancialService","name":"EM Finanzen","url":"https://em-finanzen.com","address":{"@type":"PostalAddress","addressLocality":"41640 Neuss & 27404 Zeven","addressCountry":"DE"}},"hasCredential":[{"@type":"EducationalOccupationalCredential","name":"IHK-Zertifizierung §34d GewO"}]}</script>
@@ -53,36 +54,7 @@ gtag('js',new Date());gtag('config','G-3X9XSVBPB1');}</script>
 
 <div class="scroll-progress" id="scrollProgress"></div>
 
-<header id="header">
-  <div class="header-inner">
-    <a href="index.html" class="logo">
-      <div class="logo-icon" style="display:flex;flex-direction:column;align-items:center;width:48px;">
-        <svg width="32" height="16" viewBox="0 0 60 30" fill="none">
-          <defs><linearGradient id="hCrown" x1="12" y1="14" x2="48" y2="14" gradientUnits="userSpaceOnUse"><stop stop-color="#06b6d4"/><stop offset=".5" stop-color="#3b82f6"/><stop offset="1" stop-color="#1e40af"/></linearGradient></defs>
-          <path d="M12 26 L20 10 L26 18 L30 4 L34 18 L40 10 L48 26" stroke="url(#hCrown)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          <circle cx="20" cy="9" r="2.5" fill="#3b82f6"/><circle cx="30" cy="3" r="3" fill="#1e40af"/><circle cx="40" cy="9" r="2.5" fill="#3b82f6"/>
-        </svg>
-        <span style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:24px;letter-spacing:0.08em;color:#1e3a5f;line-height:1;margin-top:-2px;">EM</span>
-        <div style="width:30px;height:2px;background:linear-gradient(90deg,#06b6d4,#3b82f6,#1e40af);border-radius:1px;margin-top:1px;"></div>
-      </div>
-      <div style="display:flex;flex-direction:column;">
-        <div class="logo-text" style="color:#1e3a5f;">EM Finanzen</div>
-        <div class="logo-tagline" style="font-family:'Cormorant Garamond',serif;font-style:italic;letter-spacing:0.02em;">Dein Weg. Deine Zukunft.</div>
-      </div>
-    </a>
-    <nav id="nav">
-      <a href="index.html#about">Über mich</a>
-      <a href="index.html#services">Leistungen</a>
-      <a href="index.html#finanzcheck">Finanz-Check</a>
-      <a href="index.html#testimonials">Kundenstimmen</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="https://cal.eu/erik-manvajler/erstberatung" class="nav-cta" target="_blank" rel="noopener">Termin buchen</a>
-    </nav>
-    <div class="mobile-toggle" onclick="toggleNav()">
-      <span></span><span></span><span></span>
-    </div>
-  </div>
-</header>
+<header id="header"></header>
 
 <section class="hero">
   <div class="hero-inner">
@@ -690,7 +662,7 @@ gtag('js',new Date());gtag('config','G-3X9XSVBPB1');}</script>
 </button>
 
 <script>const header=document.getElementById('header');const scrollProgress=document.getElementById('scrollProgress');const scrollTopBtn=document.getElementById('scrollTop');window.addEventListener('scroll',()=>{const scrolled=window.scrollY;const docHeight=document.documentElement.scrollHeight-window.innerHeight;const progress=(scrolled/docHeight)*100;scrollProgress.style.width=progress+'%';if(scrolled>60){header.classList.add('scrolled');}else{header.classList.remove('scrolled');}
-if(scrolled>400){scrollTopBtn.classList.add('visible');}else{scrollTopBtn.classList.remove('visible');}});scrollTopBtn.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'});});function toggleNav(){const nav=document.getElementById('nav');nav.classList.toggle('open');}
+if(scrolled>400){scrollTopBtn.classList.add('visible');}else{scrollTopBtn.classList.remove('visible');}});scrollTopBtn.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'});});
 function openBooking(e){window.open('https://cal.eu/erik-manvajler/erstberatung','_blank');}
 function closeBookingModal(){document.getElementById('bookingModal').style.display='none';}
 document.getElementById('bookingForm').addEventListener('submit',async function(e){e.preventDefault();const btn=this.querySelector('button[type="submit"]');const orig=btn.innerHTML;btn.innerHTML='Wird gesendet...';btn.disabled=true;try{const res=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(this)});const data=await res.json();if(data.success){window.location.href='danke.html';}else{throw new Error();}}catch(err){btn.innerHTML='Fehler - erneut versuchen';btn.style.background='#ef4444';setTimeout(()=>{btn.innerHTML=orig;btn.disabled=false;btn.style.background='';},3000);}});window.addEventListener('click',function(event){const modal=document.getElementById('bookingModal');if(event.target===modal){closeBookingModal();}});const fadeEls=document.querySelectorAll('.fade-in');const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});fadeEls.forEach(el=>observer.observe(el));setTimeout(()=>{document.getElementById('loader').classList.add('hidden');},1800);function acceptCookies(){localStorage.setItem('cookieConsent','accepted');document.getElementById('cookieBanner').classList.remove('show');var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-3X9XSVBPB1';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
@@ -738,5 +710,6 @@ document.addEventListener('click',function(e){const float=document.getElementByI
     </button>
   </div>
 
+<script src="nav.js"></script>
 </body>
 </html>
