@@ -1,5 +1,5 @@
 # EM Finanzen - Projektstatus & Launch-Checkliste
-**Stand: 19.02.2026, 02:30 Uhr**
+**Stand: 20.02.2026, 03:45 Uhr**
 **Domain: em-finanzen.com (Netcup)**
 **Hosting: GitHub Pages (live)**
 **Repo: https://github.com/EM-Finanzen/em-finanzen.com**
@@ -15,7 +15,7 @@
 - [x] DNS bei Netcup konfiguriert (A-Records, CNAME www)
 - [x] Domain-Inhaberverifizierung (ICANN/Netcup) abgeschlossen
 - [x] CNAME-Datei im Repo
-- [x] robots.txt + sitemap.xml erstellt (inkl. alle 20 Seiten)
+- [x] robots.txt + sitemap.xml erstellt
 - [x] Canonical URLs auf allen Seiten
 - [x] 404-Fehlerseite erstellt
 - [x] HTTPS - SSL-Zertifikat von GitHub (automatisch)
@@ -35,7 +35,7 @@
 - [x] Booking-URL auf allen Seiten integriert (alle "Termin buchen" Buttons)
 - [x] Booking-Modals korrigiert (cal.eu statt cal.com)
 
-### Website Features (alle 20 Seiten)
+### Website Features
 - [x] Loading Screen
 - [x] Cookie Consent Banner (DSGVO-konform)
 - [x] Floating Contact Button (WhatsApp, Telefon, E-Mail, Termin)
@@ -50,42 +50,59 @@
 - [x] Favicon auf allen Seiten
 - [x] Icons korrigiert (Euro statt Dollar, Uhr statt Smiley, Schild-Icons)
 - [x] OG-Image für Social Sharing
+- [x] Erik Manvajler Fotos integriert (Hero + Über Erik)
 
 ### SEO & Schema
 - [x] Meta Tags auf allen Seiten
 - [x] Schema.org LocalBusiness + FAQPage + FinancialService Markup
 - [x] Local SEO Seiten: Neuss, Düsseldorf, Krefeld, Dormagen, Kaarst, Meerbusch, Mönchengladbach, Ratingen, Zeven (9 Städte)
-- [x] Sitemap mit allen 20 Seiten
+- [x] Sitemap aktualisiert (ablauf.html entfernt)
 - [x] Social Media Links (Instagram + Facebook) auf allen Seiten
 
 ### Responsive / Mobile
 - [x] responsive.css nach inline Styles geladen (CSS-Cascade korrigiert)
-- [x] Burger-Menü CTA Fix (opaque Background)
 - [x] Comparison Table mobile Overflow gefixt
 - [x] Why-Grid mobile Layout gefixt
-- [x] Timeline-Dots Overlap auf Mobile gefixt (3 Seiten)
+- [x] Timeline-Dots Overlap auf Mobile gefixt
 - [x] Balkendiagramm-Visualisierung (Vermögensaufbau) mobile gefixt
 - [x] Tabellen-Layout (Steuervorteile) mobile Stacking
 
-### Content & Messaging (19.02.2026)
-- [x] "Versicherungs-Check" → "Persönliche Finanzanalyse" (alle Seiten)
-- [x] Kosten-Messaging: nur Erstgespräch kostenlos, Analyse nicht erwähnen
-- [x] Neuss als Hauptstandort (statt Zeven), Zeven sekundär
-- [x] Finanzierung-Seite komplett entfernt (inkl. alle Verlinkungen)
-- [x] Bewertungs-Stat aus Hero entfernt
-- [x] "Wirtschaftlicher Vorteil" statt "Ersparnis pro Jahr"
-- [x] Footer auf allen Seiten vereinheitlicht (Standard 4-Spalten-Layout)
+### Navigation (20.02.2026)
+- [x] Einheitliche Navigation auf allen 18 Seiten via zentrales nav.js + nav.css
+- [x] Desktop: Leistungen (Dropdown), Über Erik, Finanzrechner, FAQ, Termin buchen
+- [x] Mobile: Burger → Slide-in Panel mit allen Links + Impressum/Datenschutz + CTAs
+- [x] Burger → X Animation, Close bei ESC/Klick außerhalb
+- [x] Aktive Seite hervorgehoben (Desktop: Underline, Mobile: Background)
+- [x] Mobile Menu außerhalb Header (backdrop-filter Fix)
+- [x] Alte Nav-Varianten komplett entfernt (4 verschiedene → 1 zentrale)
 
-### Rechtliches (19.02.2026)
+### Content & Bereinigung (20.02.2026)
+- [x] ablauf.html komplett gelöscht (Datei + alle Verlinkungen + Sitemap)
+- [x] "Versicherungs-Check" → "Persönliche Finanzanalyse" (alle Seiten)
+- [x] Kosten-Messaging: nur Erstgespräch kostenlos
+- [x] Neuss als Hauptstandort, Zeven sekundär
+- [x] Bewertungs-Stat aus Hero entfernt
+- [x] Footer auf allen Seiten vereinheitlicht
+- [x] FAQ-Anker-Links gefixt (ablauf.html, finanzberater-duesseldorf.html)
+- [x] Rechner-Icons korrigiert (SVG statt falsche Emojis)
+- [x] Chart-Bars: nur Prozentzahlen statt abgeschnittene Labels
+
+### Animationen & Effekte (20.02.2026)
+- [x] Scroll Reveal: Sections/Cards faden beim Scrollen ein (IntersectionObserver)
+- [x] Counter Animation: Zahlen/Stats zählen hoch wenn sichtbar
+- [x] Parallax Hero: Dezenter Tiefeneffekt im Hero-Bereich
+- [x] Staggered Cards: Karten erscheinen nacheinander
+- [x] prefers-reduced-motion wird respektiert
+- [x] Zentral via effects.js + effects.css auf allen 18 Seiten
+
+### Rechtliches
 - [x] Datenschutzerklärung aktualisiert: GA4, WhatsApp, Instagram, Facebook korrekt deklariert
-- [x] Placeholder-Warnung aus Datenschutz entfernt
 
 ---
 
 ## OFFEN
 
 ### Von Erik benötigt
-- [ ] **Profilfoto** für ueber-erik.html (aktuell SVG-Platzhalter)
 - [ ] **Impressum-Pflichtangaben prüfen**
   - Vermittlerregister-Nummer (§34d/§34f GewO)
   - USt-IdNr. (falls vorhanden)
@@ -96,7 +113,6 @@
 ### Technisch
 - [ ] Google Search Console verifizieren + Sitemap einreichen
 - [ ] Impressum `noindex` entfernen (sollte indexierbar sein)
-- [ ] Navigation vereinheitlichen (unterschiedliche Nav-Strukturen pro Seite)
 
 ### Nice-to-Have (Nach Launch)
 - [ ] Blog/Ratgeber-Bereich
@@ -104,10 +120,11 @@
 - [ ] E-Mail-Marketing Setup
 - [ ] Weitere Local-SEO-Seiten bei Bedarf
 - [ ] Performance-Audit (Lighthouse Score optimieren)
+- [ ] finanzierung.html (Baufinanzierung) - existiert als Orphan, ggf. in Nav aufnehmen oder entfernen
 
 ---
 
-## SEITENÜBERSICHT (20 Seiten)
+## SEITENÜBERSICHT (22 Seiten)
 
 | Seite | Status | Beschreibung |
 |-------|--------|-------------|
@@ -117,9 +134,9 @@
 | vermoegensaufbau.html | Live | Vermögensaufbau & Investment |
 | steuervorteile.html | Live | Steuervorteile nutzen |
 | haushaltsoptimierung.html | Live | Haushaltsoptimierung |
-| ablauf.html | Live | So funktioniert's |
-| rechner.html | Live | Finanzrechner |
+| rechner.html | Live | Finanzrechner (3 Rechner) |
 | ueber-erik.html | Live | Über Erik Manvajler |
+| finanzierung.html | Orphan | Baufinanzierung (nicht verlinkt) |
 | danke.html | Live | Danke-Seite (noindex) |
 | datenschutz.html | Live | Datenschutzerklärung |
 | impressum.html | Live | Impressum |
@@ -133,7 +150,17 @@
 | finanzberater-moenchengladbach.html | Live | Local SEO Mönchengladbach |
 | finanzberater-ratingen.html | Live | Local SEO Ratingen |
 | finanzberater-zeven.html | Live | Local SEO Zeven |
-| ~~finanzierung.html~~ | Entfernt | Wurde am 19.02. entfernt |
+| ~~ablauf.html~~ | Gelöscht | Am 20.02. entfernt |
+
+## ZENTRALE DATEIEN
+
+| Datei | Zweck |
+|-------|-------|
+| nav.js | Einheitliche Navigation (alle 18 Seiten) |
+| nav.css | Navigation Styles |
+| effects.js | Scroll Reveal, Counter, Parallax |
+| effects.css | Animations-Styles |
+| responsive.css | Responsive Overrides |
 
 ## TECH STACK
 
