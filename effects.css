@@ -1,0 +1,100 @@
+/* ============================================
+   EM Finanzen - Scroll Effects & Animations
+   ============================================ */
+
+/* --- Scroll Reveal Base --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.reveal-left {
+  transform: translateX(-40px);
+}
+
+.reveal.reveal-right {
+  transform: translateX(40px);
+}
+
+.reveal.reveal-scale {
+  transform: scale(0.92);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Stagger delays for child elements */
+.reveal-stagger > .reveal:nth-child(1) { transition-delay: 0s; }
+.reveal-stagger > .reveal:nth-child(2) { transition-delay: 0.1s; }
+.reveal-stagger > .reveal:nth-child(3) { transition-delay: 0.2s; }
+.reveal-stagger > .reveal:nth-child(4) { transition-delay: 0.3s; }
+.reveal-stagger > .reveal:nth-child(5) { transition-delay: 0.4s; }
+.reveal-stagger > .reveal:nth-child(6) { transition-delay: 0.5s; }
+
+/* --- Counter Animation --- */
+.counter-animated {
+  display: inline-block;
+  min-width: 1.5ch;
+}
+
+/* --- Parallax Hero --- */
+.hero-parallax {
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+
+/* --- Section headers reveal --- */
+.section-header.reveal h2 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease 0.15s, transform 0.6s ease 0.15s;
+}
+
+.section-header.reveal p {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
+}
+
+.section-header.reveal .section-label {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease 0s, transform 0.5s ease 0s;
+}
+
+.section-header.reveal.visible h2,
+.section-header.reveal.visible p,
+.section-header.reveal.visible .section-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Reduced motion preference --- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.reveal-left,
+  .reveal.reveal-right,
+  .reveal.reveal-scale {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .section-header.reveal h2,
+  .section-header.reveal p,
+  .section-header.reveal .section-label {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero-parallax {
+    transform: none !important;
+    transition: none;
+  }
+}
