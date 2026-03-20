@@ -4,21 +4,22 @@
 (function() {
   'use strict';
 
-  // Detect current page
-  var path = window.location.pathname.split('/').pop() || 'index';
+  // Detect current page (works with clean URL folder structure: /versicherungen/)
+  var pathParts = window.location.pathname.replace(/\/$/, '').split('/');
+  var path = pathParts[pathParts.length - 1] || 'index';
   if (path === '' || path === '/') path = 'index';
 
   // Service pages for dropdown
   var services = [
-    { href: 'versicherungen', label: 'Versicherungen', icon: 'shield' },
-    { href: 'altersvorsorge', label: 'Altersvorsorge', icon: 'piggy' },
-    { href: 'vermoegensaufbau', label: 'Verm\u00f6gensaufbau', icon: 'chart' },
-    { href: 'steuervorteile', label: 'Steuervorteile', icon: 'receipt' },
-    { href: 'haushaltsoptimierung', label: 'Haushaltsoptimierung', icon: 'wallet' }
+    { href: '/versicherungen', slug: 'versicherungen', label: 'Versicherungen', icon: 'shield' },
+    { href: '/altersvorsorge', slug: 'altersvorsorge', label: 'Altersvorsorge', icon: 'piggy' },
+    { href: '/vermoegensaufbau', slug: 'vermoegensaufbau', label: 'Verm\u00f6gensaufbau', icon: 'chart' },
+    { href: '/steuervorteile', slug: 'steuervorteile', label: 'Steuervorteile', icon: 'receipt' },
+    { href: '/haushaltsoptimierung', slug: 'haushaltsoptimierung', label: 'Haushaltsoptimierung', icon: 'wallet' }
   ];
 
   // Check if current page is a service page
-  var isServicePage = services.some(function(s) { return s.href === path; });
+  var isServicePage = services.some(function(s) { return s.slug === path; });
 
   // SVG icons for dropdown items
   var icons = {
@@ -33,7 +34,7 @@
   var dropdownItems = '';
   for (var i = 0; i < services.length; i++) {
     var s = services[i];
-    var activeClass = s.href === path ? ' active' : '';
+    var activeClass = s.slug === path ? ' active' : '';
     dropdownItems += '<a href="' + s.href + '" class="nav-dropdown-item' + activeClass + '">' +
       '<span class="nav-dropdown-icon">' + icons[s.icon] + '</span>' +
       '<span>' + s.label + '</span></a>';
@@ -51,10 +52,13 @@
   var aboutActive = (path === 'ueber-erik') ? ' active' : '';
   var leistungenActive = isServicePage ? ' active' : '';
 
+  // Skip link HTML (Fix 2: keyboard accessibility)
+  var skipLinkHTML = '<a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:#1e3a5f;color:#fff;padding:8px 16px;z-index:99999;transition:top .3s">Zum Hauptinhalt springen</a>';
+
   // Build header inner HTML (logo + burger only)
   var headerHTML = '<div class="header-inner">' +
     // Logo
-    '<a href="index" class="logo" aria-label="EM Finanzen - Startseite">' +
+    '<a href="/" class="logo" aria-label="EM Finanzen - Startseite">' +
       '<div class="logo-icon">' + logoSVG +
         '<span style="font-family:\'Cormorant Garamond\',serif;font-weight:700;font-size:24px;letter-spacing:0.08em;color:#1e3a5f;line-height:1;margin-top:-2px;">EM</span>' +
         '<div style="width:30px;height:2px;background:linear-gradient(90deg,#06b6d4,#3b82f6,#1e40af);border-radius:1px;margin-top:1px;"></div>' +
@@ -74,9 +78,9 @@
         '</a>' +
         '<div class="nav-dropdown-menu" role="menu">' + dropdownItems + '</div>' +
       '</div>' +
-      '<a href="ueber-erik" class="nav-link' + aboutActive + '">\u00dcber Erik</a>' +
-      '<a href="rechner" class="nav-link' + (path === 'rechner' ? ' active' : '') + '">Finanzrechner</a>' +
-      '<a href="' + (path === 'index' ? '#faq' : 'index#faq') + '" class="nav-link">FAQ</a>' +
+      '<a href="/ueber-erik" class="nav-link' + aboutActive + '">\u00dcber Erik</a>' +
+      '<a href="/rechner" class="nav-link' + (path === 'rechner' ? ' active' : '') + '">Finanzrechner</a>' +
+      '<a href="' + (path === 'index' ? '#faq' : '/#faq') + '" class="nav-link">FAQ</a>' +
       '<a href="https://cal.eu/erik-manvajler/erstberatung" class="nav-cta" target="_blank" rel="noopener">Termin buchen</a>' +
     '</nav>' +
 
@@ -101,14 +105,14 @@
         '<div class="nav-dropdown-menu" role="menu">' + dropdownItems + '</div>' +
       '</div>' +
 
-      '<a href="ueber-erik" class="nav-link' + aboutActive + '">\u00dcber Erik</a>' +
-      '<a href="rechner" class="nav-link' + (path === 'rechner' ? ' active' : '') + '">Finanzrechner</a>' +
-      '<a href="' + (path === 'index' ? '#faq' : 'index#faq') + '" class="nav-link">FAQ</a>' +
+      '<a href="/ueber-erik" class="nav-link' + aboutActive + '">\u00dcber Erik</a>' +
+      '<a href="/rechner" class="nav-link' + (path === 'rechner' ? ' active' : '') + '">Finanzrechner</a>' +
+      '<a href="' + (path === 'index' ? '#faq' : '/#faq') + '" class="nav-link">FAQ</a>' +
 
       // Mobile legal links
       '<div class="nav-mobile-legal">' +
-        '<a href="impressum">Impressum</a>' +
-        '<a href="datenschutz">Datenschutz</a>' +
+        '<a href="/impressum">Impressum</a>' +
+        '<a href="/datenschutz">Datenschutz</a>' +
       '</div>' +
 
       // Mobile CTA area
@@ -124,9 +128,10 @@
       '</div>' +
     '</nav>';
 
-  // Inject header
+  // Inject skip link before header, then fill header (Fix 2)
   var header = document.getElementById('header');
   if (header) {
+    header.insertAdjacentHTML('beforebegin', skipLinkHTML);
     header.innerHTML = headerHTML;
   }
 
@@ -219,6 +224,22 @@
       dropdown.classList.remove('open');
       var trigger = dropdown.querySelector('.nav-dropdown-trigger');
       if (trigger) trigger.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Fix 8: aria-expanded for desktop dropdown on hover (mouseenter/mouseleave)
+  document.addEventListener('DOMContentLoaded', function() {
+    var desktopDropdown = document.getElementById('navDropdownDesktop');
+    if (desktopDropdown) {
+      var trigger = desktopDropdown.querySelector('.nav-dropdown-trigger');
+      desktopDropdown.addEventListener('mouseenter', function() {
+        if (trigger) trigger.setAttribute('aria-expanded', 'true');
+      });
+      desktopDropdown.addEventListener('mouseleave', function() {
+        if (trigger && !desktopDropdown.classList.contains('open')) {
+          trigger.setAttribute('aria-expanded', 'false');
+        }
+      });
     }
   });
 

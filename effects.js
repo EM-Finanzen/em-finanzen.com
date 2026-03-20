@@ -69,10 +69,12 @@
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
+          entry.target.style.willChange = 'auto';
           // If it's a stagger parent, also reveal children
           if (entry.target.classList.contains('reveal-stagger')) {
             Array.prototype.forEach.call(entry.target.children, function(child) {
               child.classList.add('visible');
+              child.style.willChange = 'auto';
             });
           }
           observer.unobserve(entry.target);
