@@ -5,16 +5,16 @@
   'use strict';
 
   // Detect current page
-  var path = window.location.pathname.split('/').pop() || 'index.html';
-  if (path === '' || path === '/') path = 'index.html';
+  var path = window.location.pathname.split('/').pop() || 'index';
+  if (path === '' || path === '/') path = 'index';
 
   // Service pages for dropdown
   var services = [
-    { href: 'versicherungen.html', label: 'Versicherungen', icon: 'shield' },
-    { href: 'altersvorsorge.html', label: 'Altersvorsorge', icon: 'piggy' },
-    { href: 'vermoegensaufbau.html', label: 'Verm\u00f6gensaufbau', icon: 'chart' },
-    { href: 'steuervorteile.html', label: 'Steuervorteile', icon: 'receipt' },
-    { href: 'haushaltsoptimierung.html', label: 'Haushaltsoptimierung', icon: 'wallet' }
+    { href: 'versicherungen', label: 'Versicherungen', icon: 'shield' },
+    { href: 'altersvorsorge', label: 'Altersvorsorge', icon: 'piggy' },
+    { href: 'vermoegensaufbau', label: 'Verm\u00f6gensaufbau', icon: 'chart' },
+    { href: 'steuervorteile', label: 'Steuervorteile', icon: 'receipt' },
+    { href: 'haushaltsoptimierung', label: 'Haushaltsoptimierung', icon: 'wallet' }
   ];
 
   // Check if current page is a service page
@@ -48,13 +48,13 @@
     '<circle cx="20" cy="9" r="2.5" fill="#3b82f6"/><circle cx="30" cy="3" r="3" fill="#1e40af"/><circle cx="40" cy="9" r="2.5" fill="#3b82f6"/></svg>';
 
   // Active states for nav links
-  var aboutActive = (path === 'ueber-erik.html') ? ' active' : '';
+  var aboutActive = (path === 'ueber-erik') ? ' active' : '';
   var leistungenActive = isServicePage ? ' active' : '';
 
   // Build header inner HTML (logo + burger only)
   var headerHTML = '<div class="header-inner">' +
     // Logo
-    '<a href="index.html" class="logo" aria-label="EM Finanzen - Startseite">' +
+    '<a href="index" class="logo" aria-label="EM Finanzen - Startseite">' +
       '<div class="logo-icon">' + logoSVG +
         '<span style="font-family:\'Cormorant Garamond\',serif;font-weight:700;font-size:24px;letter-spacing:0.08em;color:#1e3a5f;line-height:1;margin-top:-2px;">EM</span>' +
         '<div style="width:30px;height:2px;background:linear-gradient(90deg,#06b6d4,#3b82f6,#1e40af);border-radius:1px;margin-top:1px;"></div>' +
@@ -74,9 +74,9 @@
         '</a>' +
         '<div class="nav-dropdown-menu" role="menu">' + dropdownItems + '</div>' +
       '</div>' +
-      '<a href="ueber-erik.html" class="nav-link' + aboutActive + '">\u00dcber Erik</a>' +
-      '<a href="rechner.html" class="nav-link' + (path === 'rechner.html' ? ' active' : '') + '">Finanzrechner</a>' +
-      '<a href="' + (path === 'index.html' ? '#faq' : 'index.html#faq') + '" class="nav-link">FAQ</a>' +
+      '<a href="ueber-erik" class="nav-link' + aboutActive + '">\u00dcber Erik</a>' +
+      '<a href="rechner" class="nav-link' + (path === 'rechner' ? ' active' : '') + '">Finanzrechner</a>' +
+      '<a href="' + (path === 'index' ? '#faq' : 'index#faq') + '" class="nav-link">FAQ</a>' +
       '<a href="https://cal.eu/erik-manvajler/erstberatung" class="nav-cta" target="_blank" rel="noopener">Termin buchen</a>' +
     '</nav>' +
 
@@ -101,14 +101,14 @@
         '<div class="nav-dropdown-menu" role="menu">' + dropdownItems + '</div>' +
       '</div>' +
 
-      '<a href="ueber-erik.html" class="nav-link' + aboutActive + '">\u00dcber Erik</a>' +
-      '<a href="rechner.html" class="nav-link' + (path === 'rechner.html' ? ' active' : '') + '">Finanzrechner</a>' +
-      '<a href="' + (path === 'index.html' ? '#faq' : 'index.html#faq') + '" class="nav-link">FAQ</a>' +
+      '<a href="ueber-erik" class="nav-link' + aboutActive + '">\u00dcber Erik</a>' +
+      '<a href="rechner" class="nav-link' + (path === 'rechner' ? ' active' : '') + '">Finanzrechner</a>' +
+      '<a href="' + (path === 'index' ? '#faq' : 'index#faq') + '" class="nav-link">FAQ</a>' +
 
       // Mobile legal links
       '<div class="nav-mobile-legal">' +
-        '<a href="impressum.html">Impressum</a>' +
-        '<a href="datenschutz.html">Datenschutz</a>' +
+        '<a href="impressum">Impressum</a>' +
+        '<a href="datenschutz">Datenschutz</a>' +
       '</div>' +
 
       // Mobile CTA area
